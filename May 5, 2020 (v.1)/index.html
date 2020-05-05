@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--make s mobile friendly-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+	<!-- title and initial site resource setup -->
+    <title>Homepage | Kevin's Website</title>
+	<link rel="stylesheet" type="text/css" href="./resources/css/style.css">
+  </head>
+  <body>
+  
+	<div class="background">
+
+	  <div class="nav">
+	    <a class="a" href="#">Home</a>
+	    <a class="b" href="#">Projects</a>
+	    <a class="c" href="#">About Me</a>
+	    <a class="d" href="#">Resume/CV</a>
+	  </div>
+	  
+	  <!-- homepage body -->
+	  <div class="content">
+	  
+		<!-- home section content ... add links later-->
+		<div class="home">
+		  <h1>Hello. </h1>
+		  <h2>My name is Kevin Yeung.</h2>
+		  <!--h3>I'm a computer science student at the University of Vermont</h3-->
+		</div>
+		
+		<!-- projects section content -->
+		<div class="projects">
+		  <h1>Here are examples of some projects... catorigized by language, platform, software, uses</h1>
+		  <p> sfsefsfse </p>
+		  
+		  <div class="image">
+			<img src="./resources/images/python.png" />
+			<img src="./resources/images/java.png" />
+			<img src="./resources/images/c++.jpg" />
+			<img src="./resources/images/placeholder.jpg" />
+
+			<img src="./resources/images/unity.png" />
+			<img src="./resources/images/unreal.jpg" />
+			<img src="./resources/images/placeholder.jpg" />
+			<img src="./resources/images/placeholder.jpg" />
+
+			<img src="./resources/images/placeholder.jpg" />
+			<img src="./resources/images/placeholder.jpg" />
+			<img src="./resources/images/placeholder.jpg" />
+			<img src="./resources/images/placeholder.jpg" />
+		  </div>
+		</div>
+
+		<!-- aboutme section content -->
+		<div class="aboutme">
+		  <h1>I am a student at the University of Vermont </h1>
+		  <p> blah balh </p>
+		  
+		</div>
+
+		<!-- resume/cv section content -->
+		<div class="resume">
+		  <h1>here is my resume </h1>
+		  <p> blah </p>
+		  
+		</div>
+
+	</div>
+	
+	<!-- for live update effect on main page and click handling-->
+	<script type="text/javascript" src="./resources/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+	  $(document).ready(function(){
+	    $("a").click(function(){
+		  //alert("clicked");
+		  var selected = $(this);
+		  $("a").removeClass(".active");
+		  $(selected).addClass("active");
+		});
+		
+		// used for changing visual upon highlight
+		var $a = $(".a"), // a corresponds to home screen
+		$b = $(".b"), //b corresponds to projects
+		$c = $(".c"),
+		$d = $(".d"),
+		$home = $(".home"),
+		$projects = $(".projects"),
+		$aboutme = $(".aboutme"),
+		$resume = $(".resume");
+		
+		$a.click(function(){ // on click home show home and remove others...
+		  $home.fadeIn();
+		  $projects.fadeOut();
+		  $aboutme.fadeOut();
+		  $resume.fadeOut();
+		  
+		});
+		$b.click(function(){ // on click home, update accordingly...
+		  $projects.fadeIn();
+		  $home.fadeOut();
+		  $aboutme.fadeOut();
+		  $resume.fadeOut();
+		});
+		$c.click(function(){
+		  $aboutme.fadeIn();
+		  $projects.fadeOut();
+		  $home.fadeOut();
+		  $resume.fadeOut();
+		});
+		$d.click(function(){
+		  $resume.fadeIn();
+		  $home.fadeOut();
+		  $projects.fadeOut();
+		  $aboutme.fadeOut();
+		});
+
+		
+	  });
+	  
+	</script>
+	
+  </body>
+</html>
