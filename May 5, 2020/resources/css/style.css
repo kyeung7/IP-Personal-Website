@@ -1,0 +1,85 @@
+/* used for parallax effect */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  background: #f9f9f9;
+  font-size: 24px;
+  padding: 25px;
+}
+
+.parallax {
+  min-height: 300px; /* hight per parallax image */
+  background: transparent;
+}
+
+/* used to make main page look nice */
+body{
+  margin: 0;
+  padding: 0;
+  /*background: url(./resources/images/profile.jpg) no-repeat;*/
+  background-repeat: repeat;
+}
+
+/*formats box contents of title*/
+.box{
+  width: 500px; /* how wide box is */
+  background: rgba(0, 0, 0, 0.7); /* box color and transpaarancy */
+  padding: 15px; /* space between box bounds and contents */
+  text-align: left; /*all contents but text*/
+  margin: auto; /*margins from all sides, bottom defaults to 0.. use px */
+  margin-top: 2%; /*top margin*/
+  margin-bottom: 2%; /*bottom margin*/
+  color: white; /*text color*/
+  font-family: 'Century Gothic',sans-serif;
+}
+
+/*formats box contents of for body structure*/
+.boxBody{
+  width: auto; /* how wide box is */
+  background: rgba(235, 235, 235, 0.9); /* box color and transpaarancy */
+  padding: 15px; /* space between box bounds and contents */
+  text-align: center; /*all contents but text*/
+  margin: auto; /*margins from all sides, bottom defaults to 0.. use px */
+  margin-top: auto; /*top margin*/
+  margin-bottom: auto; /*bottom margin*/
+  color: black; /*text color*/
+  font-family: 'Century Gothic',sans-serif;
+}
+
+/*pfp image setting*/
+.box-img{
+  border-radius: 30%; /*roundifies pfp*/
+  width: 150px;
+  height: 150px;
+  vertical-align: middle;
+}
+
+.box h5{
+  background: rgba(0, 0, 1, 0.7); /* to denote clickable buttons later*/
+  font-size: 20px;
+  letter-spacing: 3px;
+  font-weight: 100;
+}
+.box p{
+  text-align: justify;
+}
+ul{
+  margin: 0;
+  padding: 0;
+}
+.box li{
+  display: inline-block;
+  margin: 6px;
+  list-style: none;
+}
+.box li a{
+  color: white;
+  text-decoration: none;
+  font-size: 60px;
+  transition: all ease-in-out 250ms;
+}
+
+/* makes hovering over box links change color */
+.box li a:hover{
+  color: #b9b9b9;
+}
