@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--make s mobile friendly-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+	<!-- title and initial site resource setup -->
+    <title>Homepage | Kevin's Website</title>
+	<link rel="stylesheet" type="text/css" href="./resources/css/style.css">
+	
+		<!-- parallax scroll effect setup-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="./resources/js/parallax.min.js"></script>
+  </head>
+  <body>
+	<!-- gif animation while preloading content -->
+	<div class="loader">
+	  <img src="./resources/images/load.gif" alt="Loading..." />
+	</div>
+	
+	<!-- javascript event listener-->
+	<script type="text/javascript">
+	  window.addEventListener("load", function(){
+	    const loader = document.querySelector(".loader");
+		console.log(loader);
+		loader.className += " hidden"; //class "loader hidden"
+	  });
+	</script>
+	
+	<div class="background">
+	  <div class="nav">
+	    <a class="a" href="#">Home</a>
+	    <a class="b" href="#">Projects</a>
+	    <a class="c" href="#">About Me</a>
+	    <a class="d" href="#">Resume/CV</a>
+	  </div>
+	  
+	  <!-- homepage body -->
+	  <div class="content">
+	  
+		<!-- home section content ... add links later-->
+		<div class="home">
+		  <h1>Hello. </h1>
+		  <h2>My name is Kevin Yeung.</h2>
+		  <!--h3>I'm a computer science student at the University of Vermont</h3-->
+		</div>
+		
+		<!-- projects section content -->
+		<div class="projects">
+
+
+		  <h1>Explore!</h1>
+		  <p>Section in progress ... </p>
+		  
+		  <!-- creates container of clickable tiles images -->
+		  <div class="image">
+			<!-- 4 big coding languages -->
+			<a href="./projects_python.html">
+			  <img src="./resources/images/icons/python.png" />
+			</a>
+			
+			<a href="./projects_java.html">
+			  <img src="./resources/images/icons/java.png" />
+			</a>
+
+			<a href="./projects_javascript.html">
+			  <img src="./resources/images/icons/js.png" />
+			</a>
+			
+			<!-- this includes c, c++, and c# -->
+			<a href="./projects_c.html">
+			  <img src="./resources/images/icons/c.png" />
+			</a>
+			
+			<!-- 4 development methods -->			
+			<a href="./projects_web.html">
+			  <img src="./resources/images/icons/web.png" />
+			</a>
+			
+			<a href="./projects_blender.html">
+			  <img src="./resources/images/icons/blender.png" />
+			</a>
+			
+			<a href="./projects_unity.html">
+			  <img src="./resources/images/icons/unity.png" />
+			</a>
+			
+			<a href="./projects_ue4.html">
+			  <img src="./resources/images/icons/ue4.png" />
+			</a>
+			
+			<!-- 4 platforms -->
+			<a href="./projects_windowsos.html">
+			  <img src="./resources/images/icons/windows.png" />
+			</a>
+			
+			<a href="./projects_macos.html">
+			  <img src="./resources/images/icons/mac.png" />
+			</a>
+			
+			<a href="./projects_linuxos.html">
+			  <img src="./resources/images/icons/linux.png" />
+			</a>
+			
+			<a href="./projects_mobileos.html">
+			  <img src="./resources/images/icons/mobile.png" />
+			</a>
+			
+		  </div>
+		</div>
+
+		<!-- aboutme section content -->
+		<div class="aboutme">
+		  <h1>Autobiography</h1>
+		  <p> Section in progress... </p>
+		  	<div class="box">
+				<img src="./resources/images/profile.jpeg" alt="" class="box-img">
+				<span style="font-size:25px"> <b>Kevin Yeung</b> </span>
+				<p> Placeholder for text.
+				</p>
+
+				<li><a href="index.html""><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+			</div>
+		  
+		</div>
+
+		<!-- resume/cv section content -->
+		<div class="resume">
+		  <h1>Resume/CV and Contact</h1>
+		  <p>Placeholder for pdf viewer and contact links...</p>
+		  
+		</div>
+
+	</div>
+	
+	<!-- for live update effect on main page and click handling-->
+	<script type="text/javascript" src="./resources/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+	  $(document).ready(function(){
+	    $("a").click(function(){
+		  //alert("clicked");
+		  var selected = $(this);
+		  $("a").removeClass(".active");
+		  $(selected).addClass("active");
+		});
+		
+		// used for changing visual upon highlight
+		var $a = $(".a"), // a corresponds to home screen
+		$b = $(".b"), //b corresponds to projects
+		$c = $(".c"),
+		$d = $(".d"),
+		$home = $(".home"),
+		$projects = $(".projects"),
+		$aboutme = $(".aboutme"),
+		$resume = $(".resume");
+		
+		$a.click(function(){ // on click home show home and remove others...
+		  $home.fadeIn();
+		  $projects.fadeOut();
+		  $aboutme.fadeOut();
+		  $resume.fadeOut();
+		  
+		});
+		$b.click(function(){ // on click home, update accordingly...
+		  $projects.fadeIn();
+		  $home.fadeOut();
+		  $aboutme.fadeOut();
+		  $resume.fadeOut();
+		});
+		$c.click(function(){
+		  $aboutme.fadeIn();
+		  $projects.fadeOut();
+		  $home.fadeOut();
+		  $resume.fadeOut();
+		});
+		$d.click(function(){
+		  $resume.fadeIn();
+		  $home.fadeOut();
+		  $projects.fadeOut();
+		  $aboutme.fadeOut();
+		});
+
+		
+	  });
+	  
+	</script>
+	
+  </body>
+</html>
