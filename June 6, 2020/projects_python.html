@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+	<!-- title and initial site resource setup -->
+    <title>Python | Projects | Kevin's Website</title>
+    <link rel="stylesheet" href="./resources/css/index.css">
+    <link rel="stylesheet" href="./resources/css/style.css">
+	
+    <!-- good font script -->
+	<script src="./resources/js/font.js"></script>
+	
+	<!-- parallax scroll effect setup-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="./resources/js/parallax.min.js"></script>
+
+  </head>
+  
+  <!-- init body section with params -->
+  <body text="#000000" bgcolor="ffffff" link="#ff00cc" alink="#9900ff" vlink="000000" background="./resources/images/bg_tile.jpg" background-repeat="repeat">
+	<!-- gif animation while preloading content -->
+	<div class="loader">
+	  <img src="./resources/images/load.gif" alt="Loading..." />
+	</div>
+	
+	<!-- javascript event listener-->
+	<script type="text/javascript">
+	  window.addEventListener("load", function(){
+	    const loader = document.querySelector(".loader");
+		console.log(loader);
+		loader.className += " hidden"; //class "loader hidden"
+	  });
+	</script>
+	
+	<div class="projects_link_left" style="float:left; margin:10px">
+		<img src="./resources/images/back.png" alt="" class="projects_img">
+		<a href="index.html" style="color:white"><b>Back to Home</b></a>
+	</div>
+	
+	<div class="projects_link_right" style="float:right; margin:10px">
+		<img src="./resources/images/github.png" alt="" class="projects_img">
+		<a href="https://github.com/kyeung7" style="color:white"><b>Github</b></a>
+	</div>
+	
+	<!-- create box for initial profile -->
+	<div class="box">
+		<span style="font-size:40px"> <b>Python Section</b> </span>
+		<p><i>Feel free to explore ... Link to Github is in the top right corner of the site!</i></p>
+	
+	</div>
+
+    <!-- parallax scroll effect window ..... replace first with my logo and title the rest with game/project images -->
+    <div class="parallax" data-parallax="scroll" data-image-src="./resources/images/projects/python_risk_bg.png"></div>
+		<div class="boxBody">
+			<h2> Risk </h2>
+			
+			<div class="boxBody_contents_left_1">
+			  <img src="./resources/images/projects/python_risk_show.gif" width=560/>
+			</div>
+			<div class="boxBody_contents_right_1">
+			  <p> A pygame driven implementation of the classical board game Risk. This game was created with collaboration 
+			    <br>from Duncan Enzmann, Finn Dority, and Isaac Avery-Padberg. Users start at an animated menu where they 
+				<br>can choose to start the game, look up the controls, and quit. Up to 6 total players may play Risk at a time, 
+				<br>and solo players may play against a simple "Blitz AI." This computer player plays the game with the mindset 
+				<br>of attacking using their strongest force.
+				
+				<br><br> The same usual game rules apply. There are 6 continents on the map, composed of 42 total territories.
+				<br>Depending on the number of players in the game, individuals will each start out with a set of territories
+				<br>and troops. The game can be controlled via mouse and keyboard. The 'n' key proceeds to the next round. The
+				<br>'h' key displays the help screen. Starting in the beginning, players enter a placement phase. Player turns
+				<br>are divided into phases. Placement, attack, and movement. Players earn troops via bonuses and conquering
+				<br>territories. Once they place troops on controlled territories, the players can choose to attack enemy territories.
+				<br>When attacking, randomly generated die are simulated to calculate how successful the attack is. More attackers 
+				<br>and less defenders favor the attacking player. The game ends once a player has taken over all the territories.
+				
+				<br><br>Controls:
+				<br>Right-Click/Left-Click (Mouse): Select/Deselect target territory
+				<br>Up/Down Wheel (Mouse): Add/Subtract troops
+				<br>'n' Key (Keyboard): Next round
+				<br>'h' Key (Keyboard): Help screen
+				
+
+				<br><br><br><a href="https://github.com/kyeung7/RISK" style="color:purple"><b>Check out this project for yourself!</b></a>
+			</div>
+		</div>
+		
+    <div class="parallax" data-parallax="scroll" data-image-src="./resources/images/bg/placeholder_bg.png"></div>
+		<div class="boxBody">
+			<h2> Windows Stocks Widget</h2>
+			
+			<div class="boxBody_contents_left_1">
+			  <img src="./resources/images/projects/python_ticker_show.gif" width=560/>
+			</div>
+			<div class="boxBody_contents_right_1">
+			  <p> A simple widget which gets live market updates from Yahoo services. 
+			    <br>n/a 
+				<br>n/a 
+				<br>n/a 
+				<br>n/a 
+				
+				<br><br><br><a href="https://github.com/kyeung7/RISK" style="color:purple"><b>Check out this project for yourself!</b></a>
+			</div>		</div>
+		
+    <div class="parallax" data-parallax="scroll" data-image-src="./resources/images/bg/placeholder_bg.png"></div>
+		<div class="boxBody">
+			<p> Project 3 Placeholder</p>
+		</div>
+		
+    <div class="parallax" data-parallax="scroll" data-image-src="./resources/images/bg/placeholder_bg.png"></div>
+		<div class="boxBody">
+			<p> Project 4 Placeholder</p>
+		</div>
+		
+    <div class="parallax" data-parallax="scroll" data-image-src="./resources/images/bg/placeholder_bg.png"></div>
+		<div class="boxBody">
+			<p> Project 5 Placeholder</p>
+		</div>
+
+  </body>
+</html>
