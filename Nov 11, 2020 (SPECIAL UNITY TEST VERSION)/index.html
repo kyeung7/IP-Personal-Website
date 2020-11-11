@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--make s mobile friendly-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+	<!-- title and initial site resource setup -->
+    <title>Homepage | Kevin's Website</title>
+	<link rel="stylesheet" type="text/css" href="./resources/css/style.css">
+	
+		<!-- parallax scroll effect setup-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="./resources/js/parallax.min.js"></script>
+	
+		<!-- test unity content setup-->
+	<script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/webglbuilds.json", {onProgress: UnityProgress});
+    </script>
+	
+  </head>
+  <body>
+	<!-- gif animation while preloading content -->
+	<div class="loader">
+	  <img src="./resources/images/load.gif" alt="Loading..." />
+	</div>
+	
+	<!-- javascript event listener-->
+	<script type="text/javascript">
+	  window.addEventListener("load", function(){
+	    const loader = document.querySelector(".loader");
+		console.log(loader);
+		loader.className += " hidden"; //class "loader hidden"
+	  });
+	</script>
+	
+	<div class="background">
+	  <div class="nav">
+	    <a class="a" href="#">Home</a>
+	    <a class="b" href="#">Projects</a>
+	    <a class="c" href="#">About Me</a>
+	    <a class="d" href="#">Resume/CV</a>
+		<a class="e" href="#">Private Stuff</a> <!--NOT IMPLEMENTED YET-->
+	  </div>
+	  
+	  <!-- homepage body -->
+	  <div class="content">
+	  
+		<!-- home section content ... add links later-->
+		<div class="home">
+							  	  <!-- test unity content-->
+		  <div class="webgl-content">
+		  <div id="unityContainer" style="width: 1000px; height: 525px; position: absolute; bottom: 150px; right: 112px; margin: 0px;"></div>
+		  <div class="footer">
+			<div class="webgl-logo"></div>
+			<img src="./TemplateData/fullscreen.png" style="color: green; width: 30px; height: 30px; position: absolute; bottom: 645px; right: 112px;" />
+
+			<div class="fullscreen" style="color: green; width: 30px; height: 30px; position: absolute; bottom: 645px; right: 112px;" onclick="unityInstance.SetFullscreen(1)">
+			</div>
+			
+			<div class="rainbow" style=" width: auto; height: auto; position: absolute; top: -515px; right: 150px;"> When in fullscreen mode, press "esc" key to exit ---></div>
+		  </div>
+		  </div>
+		  
+		  <h1>Hello. </h1>
+		  <h2>Welcome to my website, it is currently under renovation :)</h2>
+		  <!--h3>I'm a computer science student at the University of Vermont</h3-->		  
+		</div>
+		
+		<!-- projects section content -->
+		<div class="projects">
+		  
+		  <!-- creates container of clickable tiles images -->
+		  <div class="image">
+			<!-- 4 big coding languages -->
+			<a href="./projects_python.html">
+			  <img src="./resources/images/icons/python.png" />
+			</a>
+			
+			<a href="./projects_java.html">
+			  <img src="./resources/images/icons/java.png" />
+			</a>
+
+			<a href="./projects_javascript.html">
+			  <img src="./resources/images/icons/js.png" />
+			</a>
+			
+			<!-- this includes c, c++, and c# -->
+			<a href="./projects_c.html">
+			  <img src="./resources/images/icons/c.png" />
+			</a>
+			
+			<!-- 4 development methods -->			
+			<a href="./projects_web.html">
+			  <img src="./resources/images/icons/web.png" />
+			</a>
+			
+			<a href="./projects_blender.html">
+			  <img src="./resources/images/icons/blender.png" />
+			</a>
+			
+			<a href="./projects_unity.html">
+			  <img src="./resources/images/icons/unity.png" />
+			</a>
+			
+			<a href="./projects_ue4.html">
+			  <img src="./resources/images/icons/ue4.png" />
+			</a>
+			
+			<!-- 4 platforms -->
+			<a href="./projects_windowsos.html">
+			  <img src="./resources/images/icons/windows.png" />
+			</a>
+			
+			<a href="./projects_macos.html">
+			  <img src="./resources/images/icons/mac.png" />
+			</a>
+			
+			<a href="./projects_linuxos.html">
+			  <img src="./resources/images/icons/linux.png" />
+			</a>
+			
+			<a href="./projects_mobileos.html">
+			  <img src="./resources/images/icons/mobile.png" />
+			</a>
+			
+		  </div>
+		</div>
+
+		<!-- aboutme section content -->
+		<div class="aboutme">
+		  
+		  	<div class="aboutme_left_box">
+				<img src="./resources/images/profile.jpeg" alt="" class="box-img">
+				<span style="font-size:35px"></span>
+				<h1> Kevin Yeung </h1>
+			</div>
+			
+			<div class="aboutme_right_box">
+				<span style="font-size:30px"> <u>Who am I?</u> </span>
+				<p> I am a computer science student at the University of Vermont. I moved here from Connecticut
+				  back in 2006. I've always had a knack for sciences and even today harbor child-like facination.
+				  <br><br> I enjoy traveling and exploring new places, I also like being active and staying in shape.
+				    I spend the majority of my time on coursework. Outside school, I like to broaden my technical skills
+					using the internet to teach myself new software and languages.
+					<br><br>My goals for the future are flexible. Ideally, I wish to become financially independent 
+					  with a well paying job that I enjoy. I would like to work for a technologically-renown company and 
+					  make my mark on the world. I also have personal goals I want to meet outside my career. 
+					  Some of these bucket list items I hope to one day complete include:
+					  
+					  <div class="aboutme_right_box_list">
+					  <ul>
+					    <li><i>Scuba diving in the Great Barrier Reef</i></li>
+					    <li><i>Riding in a hot air balloon</i></li>
+					  </ul>
+					  </div>
+					  
+					  <div class="aboutme_left_box_list">
+					  <ul>
+					    <li><i>Going to see the Northern Lights</i></li>
+					    <li><i>Sailing past the Golden Gate Bridge</i></li>
+					  </ul>
+					  </div>
+				</p>
+			</div>
+		  
+		</div>
+
+		<!-- resume/cv section content -->
+		<div class="resume">
+		<div>
+		  <!--
+		  <h1>Resume/CV and Contact</h1>
+		  
+		  		  <h1>Hello. </h1>
+		  <h2>My name is Kevin Yeung.</h2>
+		  -->
+		  <p> </p>
+		
+		
+		<div class="pdf_left">
+		<h2>Career Resume</h2>
+		<embed src="./resources/documents/career_resume.pdf" width="100%" height="100%" 
+				type="application/pdf">
+		</div>
+		
+		<div class="pdf_right">
+		<h2>Non-Career Resume</h2>
+		<embed src="./resources/documents/non_career_resume.pdf" width="100%" height="100%" 
+				type="application/pdf">
+		</div>
+		
+				  <!-- pdf titles 
+		  <div class="pdf_text">
+		  <h1>Resume/CV and Contact</h1>
+		  
+		  		  <h1>Hello. </h1>
+		  <h2>My name is Kevin Yeung.</h2>
+		  <p>Placeholder for pdf viewer and contact links...</p>
+		  </div>-->
+		  <!--
+		  <!-- pdf windows --
+		  <div style="padding:20px" style="width:100px; height:100px">
+		    <embed style="application/pdf" src="./resources/documents/career_resume.pdf" 
+			style="width:100px; height:100px">
+			</embed>
+		  </div>
+		  
+		  <div style="padding:20px" style="width:100px; height:100px">
+		    <embed style="application/pdf" src="./resources/documents/career_resume.pdf" 
+			style="width:100px; height:100px">
+			</embed>
+		  </div> -->
+		  
+		  </div>
+		</div>
+	</div>
+	
+	<!-- for live update effect on main page and click handling-->
+	<script type="text/javascript" src="./resources/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+	  $(document).ready(function(){
+	    $("a").click(function(){
+		  //alert("clicked");
+		  var selected = $(this);
+		  $("a").removeClass(".active");
+		  $(selected).addClass("active");
+		});
+		
+		// used for changing visual upon highlight
+		var $a = $(".a"), // a corresponds to home screen
+		$b = $(".b"), //b corresponds to projects
+		$c = $(".c"),
+		$d = $(".d"),
+		$home = $(".home"),
+		$projects = $(".projects"),
+		$aboutme = $(".aboutme"),
+		$resume = $(".resume");
+		
+		$a.click(function(){ // on click home show home and remove others...
+		  $home.fadeIn();
+		  $projects.fadeOut();
+		  $aboutme.fadeOut();
+		  $resume.fadeOut();
+		  
+		});
+		$b.click(function(){ // on click home, update accordingly...
+		  $projects.fadeIn();
+		  $home.fadeOut();
+		  $aboutme.fadeOut();
+		  $resume.fadeOut();
+		});
+		$c.click(function(){
+		  $aboutme.fadeIn();
+		  $projects.fadeOut();
+		  $home.fadeOut();
+		  $resume.fadeOut();
+		});
+		$d.click(function(){
+		  $resume.fadeIn();
+		  $home.fadeOut();
+		  $projects.fadeOut();
+		  $aboutme.fadeOut();
+		});
+		<!-- $e.click(function(){ -->
+		
+
+
+		<!-- }); -->
+	  });
+	  
+	</script>
+	
+  </body>
+</html>
