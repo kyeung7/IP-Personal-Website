@@ -1,0 +1,197 @@
+/*class for title and class font, color*/
+
+.title {
+	background-color: #FFFFFF;
+	color: black;
+	margin-top: 25px;
+	text-align: center;
+	
+}
+
+/*class for centering and resizing image*/
+.animateImage{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width:10%;
+	
+	position: absolute;
+	animation-name: animate;
+	animation-duration: 3.5s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes animate {
+	
+	from {
+   transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+  0%   {left:-700px; top:0px;}
+  10%   {left:44px; top:66px;}
+  20%   {left:520px; top:-22px;}
+  30%  {left:0; top:410px;}
+  40%  {left:-141; top:189px;}
+  50%  {left:-490; top:200px;}
+  60%  {left:500; top:0px;}
+  70%  {left:-590; top:-50px;}
+  80%  {left:8; top:428px;}
+  90%  {left:570; top:-4px;}
+  100% {left:-700px; top:0px;}
+}
+
+/* other one*/
+.animateImage1{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width:10%;
+	
+	position: absolute;
+	animation-name: animate1;
+	animation-duration: 4.5s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes animate1 {
+	
+	from {
+   transform: rotate(359deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+  0%   {left:-700px; top:0px;}
+  10%   {left:44px; top:66px;}
+  20%   {left:520px; top:-22px;}
+  30%  {left:0; top:410px;}
+  40%  {left:-141; top:189px;}
+  50%  {left:-490; top:200px;}
+  60%  {left:500; top:0px;}
+  70%  {left:-590; top:-50px;}
+  80%  {left:8; top:428px;}
+  90%  {left:570; top:-4px;}
+  100% {left:-700px; top:0px;}
+}
+
+
+/* other one*/
+.animateImage2{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width:10%;
+	
+	position: absolute;
+	animation-name: animate2;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes animate2 {
+	
+	from {
+   transform: rotate(359deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+  0%   {left:-700px; top:0px;}
+  10%   {left:44px; top:66px;}
+  20%   {left:520px; top:-22px;}
+  30%  {left:0; top:410px;}
+  40%  {left:-141; top:189px;}
+  50%  {left:-490; top:200px;}
+  60%  {left:500; top:0px;}
+  70%  {left:-590; top:-50px;}
+  80%  {left:8; top:428px;}
+  90%  {left:570; top:-4px;}
+  100% {left:-700px; top:0px;}
+}
+
+.animateImage3{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width:10%;
+	
+	position: absolute;
+	animation-name: animate3;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes animate3 {
+	
+	from {
+   transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(490deg);
+  }
+  0%   {left:-700px; top:0px;}
+  10%   {left:44px; top:66px;}
+  20%   {left:520px; top:-22px;}
+  30%  {left:0; top:410px;}
+  40%  {left:-141; top:189px;}
+  50%  {left:-490; top:200px;}
+  60%  {left:500; top:0px;}
+  70%  {left:-590; top:-50px;}
+  80%  {left:8; top:428px;}
+  90%  {left:570; top:-4px;}
+  100% {left:-700px; top:0px;}
+}
+  
+ .animateImage4{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width:10%;
+	
+	position: absolute;
+	animation-name: animate4;
+	animation-duration: 3.7s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes animate4 {
+	
+	from {
+   transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+  0%   {left:-700px; top:0px;}
+  10%   {left:44px; top:66px;}
+  20%   {left:520px; top:-22px;}
+  30%  {left:0; top:410px;}
+  40%  {left:-141; top:189px;}
+  50%  {left:-490; top:200px;}
+  60%  {left:500; top:0px;}
+  70%  {left:-590; top:-50px;}
+  80%  {left:8; top:428px;}
+  90%  {left:570; top:-4px;}
+  100% {left:-700px; top:0px;}
+}
+/* this animates a box by changing color and position
+div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+*/

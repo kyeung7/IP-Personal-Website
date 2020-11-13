@@ -1,0 +1,799 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+/* gif preloader setup */
+.loader {
+  position: fixed; /* wont scroll with scroller */
+  z-index: 99; /* load is ontop of everything */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(59, 64, 70, 1.0);
+  display: flex;
+  justify-content: center; /*h center*/
+  align-items: center; /*vertical center*/
+}
+
+/* home button formatting */
+button {
+  background-image: url(./resources/images/placeholder.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  /* put the height and width of your image here */
+  height: 50px;
+  width: 200px;
+  border: none;
+}
+
+
+.loader > img {
+  width: 100px; /*resize gif for loader*/
+}
+
+.loader.hidden { /*animate fade for loader*/
+	animation: fadeOut 1.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+	100% { /*when load hide loader animation */
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+/*``````````````````````````````````````````````````````````````````````````````````*/
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+/*main bg */
+.background {
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/bg/home_bg.jpg); /*path needs to be relative to css not html*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow-y: auto;
+}
+
+
+/* menu setup */
+.nav {
+  width: 275px;
+  height: 100px;
+  /*background-color: gray; REMOVED TO MAKE TRANSPARENT TO BG*/
+  position: absolute;
+  top: 25%; /* menu top down position*/
+  left: 0;
+}
+
+.nav a{
+  text-decoration: none;
+  font-size: 28px;
+  font-family: verdana;
+  font-weight: bold;
+  width: 85%;
+  height: 90px;
+  margin: 5px 0;
+  float: left;
+  display: inline-block;
+  background-color: black;
+  color: white;
+  line-height: 90px;
+  text-align: center;
+  transition: 300ms;
+}
+
+/* interactive menu hover */
+.nav a:hover { /*home button always white*/
+	background-color: white;
+	color: black;
+	width: 100%;
+}
+
+/* homepage body content */
+.content {
+  position: absolute;
+  width: 1215px;
+  min-height: 600px;
+  height: auto;
+  /*background-color: red;*/
+  right: 3%;
+  top: 13%;
+}
+
+/* pdf left content */
+.pdf_left {
+  position: absolute;
+  width: 537.5px;
+  min-height: 500px;
+  height: 685px;
+  /*background-color: green;*/
+  right: 525%;
+  top: -100px
+}
+
+/* pdf right content */
+.pdf_right {
+  position: absolute;
+  width: 537.5px;
+  min-height: 500px;
+  height: 685px;
+  /*background-color: grey;*/
+  right: 50%;
+  top: -100px
+}
+
+/* pdf right content */
+.pdf_text {
+  position: absolute;
+  width: 525px;
+  min-height: 500px;
+  height: 650px;
+  /*background-color: black;*/
+  right: 10%;
+  top: 50%;
+}
+/* ```````````````````````````````````````````````````````````````````*/
+/* home sectiontext */
+.home {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: white;
+  font-family: verdana;
+  text-transform: uppercase;
+}
+
+.home h1 {
+  font-size: 95px;
+  padding-right: 50px;
+  border-bottom: 1px solid white;
+}
+
+.home h2 {
+  font-size: 28px;
+  padding: 5px 0;
+
+}
+
+/* ```````````````````````````````````````````````````````````````````*/
+
+/* projects section text */
+.projects {
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  color: white;
+  font-family: verdana;
+  padding: 0 0px;
+  display: none;
+}
+/*
+.projects p {
+  font-size: 18px;
+  line-height: 28px;
+  
+}*/
+
+/* image formatting for project gallery section*/
+.projects .image {
+  width: 100%;
+  margin: 2%;
+  float: left;
+}
+
+.image img {
+  border-radius: 25px; /* makes corners round */
+  padding-top: 0%; /*spacing between images */
+  padding-right: 0%;
+  width: 24%; /* changes iamge width*/
+  transition: all ease 0.5s;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+}
+
+.image img:hover {
+  transform: scale(1.1);
+}
+
+/*title section
+.project_header{
+  font-size: 20px;
+  position: absolute;
+  width: 290px;
+  min-height: 75px;
+  height: 75px;
+  background-color: green;
+  right: 37.5%;
+  top: -6%;
+  font-family: verdana;
+  text-transform: uppercase;
+}
+*/
+/* menu for projects */
+.projects_box{
+  width: 500px; /* how wide box is */
+  background: rgba(0, 0, 0, 0.7); /* box color and transpaarancy */
+  padding: 15px; /* space between box bounds and contents */
+  text-align: center;
+  margin: auto; /*margins from all sides, bottom defaults to 0.. use px */
+  margin-top: 2%; /*top margin*/
+  margin-bottom: 2%; /*bottom margin*/
+  color: white; /*text color*/
+  font-family: 'Century Gothic',sans-serif;
+}
+
+/* box to contain links for project sites */
+.projects_link_left {
+  height: 100px;
+  width: 100px; /* how wide box is */
+  text-align: center;
+  margin-top: 2%; /*top margin*/
+  margin-bottom: 2%; /*bottom margin*/
+  font-family: 'Century Gothic',sans-serif;
+  margin-top: 2%; /*top margin*/
+
+}
+
+.projects_link_right {
+  height: 100px;
+  width: 100px; /* how wide box is */
+  text-align: center;
+  margin-top: 2%; /*top margin*/
+  margin-bottom: 2%; /*bottom margin*/
+  font-family: 'Century Gothic',sans-serif;
+}
+
+.projects_img {
+  border-radius: 10%; /*roundifies pfp*/
+  width: 85px;
+  height: 50px;
+  vertical-align: middle;
+}
+/* ```````````````````````````````````````````````````````````````````*/
+
+/* about me section text */
+.aboutme {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  color: white;
+  font-family: century gothic;
+  padding: 0 60px;
+  display: none;
+}
+
+.aboutme p { /* helps quick format text in section*/
+  font-size: 18px;
+  line-height: 28px;
+  
+}
+
+/*formats box contents of title*/
+.aboutme_left_box{
+  width: 430px; /* how wide box is */
+  height: 470px;
+  padding: 10px; /* space between box bounds and contents */
+  text-align: center;
+  margin: auto; /*margins from all sides, bottom defaults to 0.. use px */
+  color: white; /*text color*/
+  font-family: 'Century Gothic',sans-serif;
+  margin-top: 3%;
+  margin-bottom: 7%;
+  margin-left: -47.5%;
+  margin-right: 0%;
+}
+
+/*formats box contents of title*/
+.aboutme_right_box{
+  width: 750px; /* how wide box is */
+  height: 470px;
+  background: rgba(0, 0, 0, 0.7); /* box color and transpaarancy */
+  padding: 26px; /* space between box bounds and contents */
+  text-align: left; /*all contents but text*/
+  color: white; /*text color*/
+  font-family: 'Century Gothic',sans-serif;
+  margin-top: -70%;
+  margin-bottom: 0%;
+  margin-left: 8%;
+  margin-right: 0%;
+}
+
+/*formats boxes for about me*/
+.aboutme_right_box_list{
+  width: 150px;
+  height: 50px;
+  padding: 26px; /* space between box bounds and contents */
+  text-align: left; /*all contents but text*/
+  color: white; /*text color*/
+  font-family: 'Century Gothic',sans-serif;
+  margin-top: -5%;
+  margin-bottom: 0%;
+  margin-left: 50%;
+  margin-right: 60%;
+  z-index: 98; /* load is ontop of everything */
+
+}
+
+.aboutme_left_box_list{
+  width: 150px;
+  height: 50px;
+  padding: 26px; /* space between box bounds and contents */
+  text-align: left; /*all contents but text*/
+  color: white; /*text color*/
+  font-family: 'Century Gothic',sans-serif;
+  margin-top: -102px;
+  margin-bottom: 0%;
+  margin-left: 20%;
+  margin-right: 0%;
+  z-index: 98; /* load is ontop of everything */
+
+}
+/* ```````````````````````````````````````````````````````````````````*/
+
+/* resume section text */
+.resume {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  color: white;
+  font-family: verdana;
+  padding: 0 60px;
+  display: none;
+
+}
+
+.resume p {
+  font-size: 18px;
+  line-height: 28px;
+  
+}
+
+/* for mobile support */
+@media only screen and (max-width: 768px) {
+
+	html, body {
+	  font-size: 12px;
+	  font-weight: normal;
+	}
+
+	.nav a {
+		font-size: 9px;
+		width: 18%;
+		height: 25px;
+		line-height: 20px;
+		padding: 0 5px;
+		margin: 0 6px; /* mobile menu padding */
+	}
+	
+	.nav a:hover {
+	  width: auto;
+	}
+	
+	.nav {
+	   width: 100%;
+	   top: 20px;
+	   z-index: 99;
+	}
+	
+	.home h1 {
+	  font-size: 22px;
+	  padding-right: 0;
+	  border-bottom: none;
+	}
+	
+	.home h2 { /* secondary main menu title font */
+	  font-size: 14px;
+	  padding: 86px 0;
+	}
+	
+	.content { /* main text for mobile*/
+	  width: 100%;
+	  height: 100%;
+	  top: -30px;
+	  min-height: inherit;
+	  right: 0%;
+	}
+	
+	.home {
+	  left: 0;
+	  text-align: center;
+	  bottom: 50px;
+	}
+	
+	.background {
+	  background-position: center;
+	}
+	
+	.projects {
+	  width: 90%;
+	  margin: 0 auto;
+	  padding: 100px 0 0;
+	  top: 0;
+	  left: 0;
+	}
+	
+	/*.projects p {
+	  font-size: 14px;
+	} */
+	
+	.projects .image {
+	  width: 95%;
+	  margin: 3%;
+	  float: left;
+	}
+	
+	
+	.aboutme {
+	  width: 90%;
+	  margin: 0 auto;
+	  padding: 100px 0 0;
+	  top: 0;
+	  left: 0;
+	}
+	
+	.aboutme p {
+	  font-size: 14px;
+	}
+	
+	.resume {
+	  width: 90%;
+	  margin: 0 auto;
+	  padding: 100px 0 0;
+	  top: 0;
+	  left: 0;
+	}
+	
+	.resume p {
+	  font-size: 14px;
+	}
+}
+
+/*````````````````````````````````````````````````````````````````````````````````````````````*/
+/* used for parallax effect */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  background: #f9f9f9;
+  font-size: 24px;
+  padding: 25px;
+}
+
+.parallax {
+  min-height: 300px; /* hight per parallax image */
+  background: transparent;
+}
+
+/* used to make main page look nice */
+body{
+  margin: 0;
+  padding: 0;
+  /*background: url(./resources/images/profile.jpg) no-repeat;*/
+  background-repeat: repeat;
+}
+
+/*formats box contents of title*/
+.box{
+  width: 1427px; /* how wide box is */
+  background: rgba(0, 0, 0, 0.7); /* box color and transpaarancy */
+  padding: 46px; /* space between box bounds and contents */
+  text-align: center; /*all contents but text*/
+  margin: auto; /*margins from all sides, bottom defaults to 0.. use px */
+  margin-top: 0%; /*top margin*/
+  margin-bottom: 0%; /*bottom margin*/
+  color: white; /*text color*/
+  font-family: 'Century Gothic',sans-serif;
+}
+
+/*formats box contents of title*/
+.box_alt{
+  width: 1427px; /* how wide box is */
+  background-image: url("../images/bg/fun_room_bg.jpg"); /* using image as bg, use .. to go up 1 directory from css */
+  padding: 46px; /* space between box bounds and contents */
+  text-align: center; /*all contents but text*/
+  margin: auto; /*margins from all sides, bottom defaults to 0.. use px */
+  margin-top: 0%; /*top margin*/
+  margin-bottom: 0%; /*bottom margin*/
+  color: white; /*text color*/
+  font-family: 'Century Gothic',sans-serif;
+}
+
+/*formats box contents of for body structure*/
+.boxBody{
+  width: auto; /* how wide box is */
+  height: auto;
+  background: rgba(255, 255, 255, 0.9); /* box color and transpaarancy */
+  padding: 15px; /* space between box bounds and contents */
+  text-align: center; /*all contents but text*/
+  margin: auto; /*margins from all sides, bottom defaults to 0.. use px */
+  margin-top: auto; /*top margin*/
+  margin-bottom: auto; /*bottom margin*/
+  color: black; /*text color*/
+  font-family: 'Century Gothic',sans-serif;
+}
+
+/*``````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````*/
+.boxBody_contents_left_1{
+  width: 750px; 
+  height: 450px; 
+  /*background: rgba(0, 0, 0, 0.3); /* box color and transpaarancy */
+  text-align: left;
+  margin: 0px;
+  margin-top: 0%;
+  margin-bottom: 5%;
+  margin-left: 3%;
+  margin-right: 0%;
+  color: black; 
+  font-family: 'Century Gothic',sans-serif;
+}
+
+.boxBody_contents_right_1{
+  /*border: 5px solid black;*/
+  height: 130px;
+  width: 750px; 
+ /* background: rgba(0, 0, 0, 0.3); /* box color and transpaarancy */
+  text-align: left;
+  margin: 0px; 
+  margin-top: -34%;
+  margin-bottom: 19%;
+  margin-left: 45%;
+  margin-right: 60%;
+  color: black; 
+  font-family: 'Century Gothic',sans-serif;
+}
+
+.boxBody_contents_left_2{
+  width: 750px; 
+  height: 450px; 
+  background: rgba(0, 0, 0, 0.3); /* box color and transpaarancy */
+  text-align: left;
+  margin: 0px;
+  margin-top: 1%;
+  margin-bottom: 0%;
+  margin-left: 3%;
+  margin-right: 0%;
+  color: black; 
+  font-family: 'Century Gothic',sans-serif;
+}
+
+.boxBody_contents_right_2{
+  width: 750px; 
+  background: rgba(0, 0, 0, 0.3); /* box color and transpaarancy */
+  text-align: left;
+  margin: 0px; 
+  margin-top: -25%;
+  margin-bottom: 15%;
+  margin-left: 45%;
+  margin-right: 60%;
+  color: black; 
+  font-family: 'Century Gothic',sans-serif;
+}
+
+.boxBody_contents_left_3{
+  width: 750px; 
+  height: 450px; 
+  background: rgba(0, 0, 0, 0.3); /* box color and transpaarancy */
+  text-align: left;
+  margin: 0px;
+  margin-top: 1%;
+  margin-bottom: 0%;
+  margin-left: 3%;
+  margin-right: 0%;
+  color: black; 
+  font-family: 'Century Gothic',sans-serif;
+}
+
+.boxBody_contents_right_3{
+  width: 750px; 
+  background: rgba(0, 0, 0, 0.3); /* box color and transpaarancy */
+  text-align: left;
+  margin: 0px; 
+  margin-top: -25%;
+  margin-bottom: 15%;
+  margin-left: 45%;
+  margin-right: 60%;
+  color: black; 
+  font-family: 'Century Gothic',sans-serif;
+}
+
+.boxBody_contents_left_4{
+  width: 750px; 
+  height: 450px; 
+  background: rgba(0, 0, 0, 0.3); /* box color and transpaarancy */
+  text-align: left;
+  margin: 0px;
+  margin-top: 1%;
+  margin-bottom: 0%;
+  margin-left: 3%;
+  margin-right: 0%;
+  color: black; 
+  font-family: 'Century Gothic',sans-serif;
+}
+
+.boxBody_contents_right_4{
+  width: 750px; 
+  background: rgba(0, 0, 0, 0.3); /* box color and transpaarancy */
+  text-align: left;
+  margin: 0px; 
+  margin-top: -25%;
+  margin-bottom: 15%;
+  margin-left: 45%;
+  margin-right: 60%;
+  color: black; 
+  font-family: 'Century Gothic',sans-serif;
+}
+
+.boxBody_contents_left_5{
+  width: 750px; 
+  height: 450px; 
+  background: rgba(0, 0, 0, 0.3); /* box color and transpaarancy */
+  text-align: left;
+  margin: 0px;
+  margin-top: 1%;
+  margin-bottom: 0%;
+  margin-left: 3%;
+  margin-right: 0%;
+  color: black; 
+  font-family: 'Century Gothic',sans-serif;
+}
+
+.boxBody_contents_right_5{
+  width: 750px; 
+  background: rgba(0, 0, 0, 0.3); /* box color and transpaarancy */
+  text-align: left;
+  margin: 0px; 
+  margin-top: -25%;
+  margin-bottom: 15%;
+  margin-left: 45%;
+  margin-right: 60%;
+  color: black; 
+  font-family: 'Century Gothic',sans-serif;
+}
+
+
+
+/*``````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````*/
+
+/*pfp image setting*/
+.box-img{
+  border-radius: 5%; /*roundifies pfp*/
+  width: 370px;
+  height: 450px;
+  vertical-align: middle;
+}
+
+.box h5{
+  background: rgba(0, 0, 1, 0.7); /* to denote clickable buttons later*/
+  font-size: 20px;
+  letter-spacing: 3px;
+  font-weight: 100;
+}
+
+.box p{
+  text-align: center;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+.box li{
+  display: inline-block;
+  margin: 6px;
+  list-style: none;
+}
+.box li a{
+  color: white;
+  text-decoration: none;
+  font-size: 60px;
+  transition: all ease-in-out 250ms;
+}
+
+/* makes hovering over box links change color */
+.box li a:hover{
+  color: #b9b9b9;
+}
+
+
+
+.rainbow {
+  
+   /* Font options */
+  font-family: 'Pacifico', cursive, bold;
+  text-shadow: 2px 2px 4px #000000;
+  font-size:20px;
+  
+   /* Chrome, Safari, Opera */
+  -webkit-animation: rainbow 5s infinite; 
+  
+  /* Internet Explorer */
+  -ms-animation: rainbow 5s infinite;
+  
+  /* Standar Syntax */
+  animation: rainbow 5s infinite; 
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes rainbow{
+  0%{color: orange;}	
+  10%{color: purple;}	
+	20%{color: red;}
+  30%{color: CadetBlue;}
+	40%{color: yellow;}
+  50%{color: coral;}
+	60%{color: green;}
+  70%{color: cyan;}
+  80%{color: DeepPink;}
+  90%{color: DodgerBlue;}
+	100%{color: orange;}
+}
+
+/* Internet Explorer */
+@-ms-keyframes rainbow{
+   0%{color: orange;}	
+  10%{color: purple;}	
+	20%{color: red;}
+  30%{color: CadetBlue;}
+	40%{color: yellow;}
+  50%{color: coral;}
+	60%{color: green;}
+  70%{color: cyan;}
+  80%{color: DeepPink;}
+  90%{color: DodgerBlue;}
+	100%{color: orange;}
+}
+
+/* Standar Syntax */
+@keyframes rainbow{
+    0%{color: orange;}	
+  10%{color: purple;}	
+	20%{color: red;}
+  30%{color: CadetBlue;}
+	40%{color: yellow;}
+  50%{color: coral;}
+	60%{color: green;}
+  70%{color: cyan;}
+  80%{color: DeepPink;}
+  90%{color: DodgerBlue;}
+	100%{color: orange;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
