@@ -49,7 +49,7 @@ button {
 html, body {
   width: 100%;
   height: 100%;
-  font-size: 14px;
+  font-size: 1.6vh;
   font-weight: normal;
 }
 
@@ -57,7 +57,7 @@ html, body {
 .background {
   width: 100%;
   height: 100%;
-  background-image: url(../images/bg/home_bg.jpg); /*path needs to be relative to css not html*/
+  background-image: url(../images/bg/earth_bg.gif);/*url(../images/bg/home_bg.jpg);*/ /*path needs to be relative to css not html*/
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -67,29 +67,30 @@ html, body {
 
 /* menu setup */
 .nav {
-  width: 275px;
-  height: 100px;
+  width: 37vh;
+  height: 10vh;
   /*background-color: gray; REMOVED TO MAKE TRANSPARENT TO BG*/
-  position: absolute;
-  top: 25%; /* menu top down position*/
-  left: 0;
+  position: relative;
+  top: 6vh; /* menu top down position*/
+  left: 0vh;
 }
 
 .nav a{
   text-decoration: none;
-  font-size: 28px;
+  font-size: 6vh; /* instead of pix or percentages, use vh for variable scaling on zoom */
   font-family: verdana;
   font-weight: bold;
-  width: 85%;
-  height: 90px;
-  margin: 5px 0;
+  width: 100%;
+  height: 100%;
+  margin: 1% 0%;
+  padding: 5% 16%;
   float: left;
   display: inline-block;
   background-color: black;
   color: white;
-  line-height: 90px;
+  line-height: 100%;
   text-align: center;
-  transition: 300ms;
+  transition: 200ms;
 }
 
 /* interactive menu hover */
@@ -101,35 +102,34 @@ html, body {
 
 /* homepage body content */
 .content {
-  position: absolute;
-  width: 1215px;
-  min-height: 600px;
-  height: auto;
+  position: relative;
+  width: 135vh;
+  height: 80vh;
   /*background-color: red;*/
-  right: 3%;
-  top: 13%;
+  right: -60vh;
+  top: 2vh;
 }
 
 /* pdf left content */
 .pdf_left {
-  position: absolute;
-  width: 537.5px;
-  min-height: 500px;
-  height: 685px;
+  position: relative;
+  width: 70vh;
+  height: 94vh;
   /*background-color: green;*/
-  right: 525%;
-  top: -100px
+  right: 0vh;
+  top: 3vh;
+  margin: 0vh 0vh;
 }
 
 /* pdf right content */
 .pdf_right {
-  position: absolute;
-  width: 537.5px;
-  min-height: 500px;
-  height: 685px;
-  /*background-color: grey;*/
-  right: 50%;
-  top: -100px
+  position: relative;
+  width: 70vh;
+  height: 94vh;
+  /*background-color: green;*/
+  right: 0vh;
+  top: 0vh;
+  margin: -12.2vh 72vh;
 }
 
 /* pdf right content */
@@ -147,21 +147,21 @@ html, body {
 .home {
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: 1vh;
   color: white;
   font-family: verdana;
   text-transform: uppercase;
 }
 
 .home h1 {
-  font-size: 95px;
-  padding-right: 50px;
+  font-size: 10vh;
+  padding-right: 0vh;
   border-bottom: 1px solid white;
 }
 
 .home h2 {
-  font-size: 28px;
-  padding: 5px 0;
+  font-size: 3vh;
+  padding: 0vh 0vh;
 
 }
 
@@ -169,33 +169,32 @@ html, body {
 
 /* projects section text */
 .projects {
-  position: absolute;
-  right: 0px;
-  top: 10px;
+  position: relative;
+  right: 0vh;
+  top: 0vh;
   color: white;
   font-family: verdana;
-  padding: 0 0px;
+  padding: 0vh 0vh;
   display: none;
+  height: 75vh;
 }
-/*
-.projects p {
-  font-size: 18px;
-  line-height: 28px;
-  
-}*/
+
 
 /* image formatting for project gallery section*/
 .projects .image {
-  width: 100%;
-  margin: 2%;
-  float: left;
+  width: 140vh;
+  margin: -156vh 0vh;
+  float: right;
+  top: 85vh;
+  position: relative;
+
 }
 
 .image img {
-  border-radius: 25px; /* makes corners round */
-  padding-top: 0%; /*spacing between images */
-  padding-right: 0%;
-  width: 24%; /* changes iamge width*/
+  border-radius: 3vh; /* makes corners round */
+  padding-top: 0vh; /*spacing between images */
+  padding-right: 0vh;
+  width: 34vh; /* changes iamge width*/
   transition: all ease 0.5s;
   transform: scale(1);
   -webkit-transform: scale(1);
@@ -234,22 +233,16 @@ html, body {
 
 /* box to contain links for project sites */
 .projects_link_left {
-  height: 100px;
-  width: 100px; /* how wide box is */
+  height: 30vh;
+  width: 18vh; /* how wide box is */
   text-align: center;
-  margin-top: 2%; /*top margin*/
-  margin-bottom: 2%; /*bottom margin*/
   font-family: 'Century Gothic',sans-serif;
-  margin-top: 2%; /*top margin*/
-
 }
 
 .projects_link_right {
-  height: 100px;
-  width: 100px; /* how wide box is */
+  height: 30vh;
+  width: 18vh; /* how wide box is */
   text-align: center;
-  margin-top: 2%; /*top margin*/
-  margin-bottom: 2%; /*bottom margin*/
   font-family: 'Century Gothic',sans-serif;
 }
 
@@ -263,93 +256,94 @@ html, body {
 
 /* about me section text */
 .aboutme {
-  position: absolute;
-  right: 0;
-  top: 10px;
+  position: relative;
+  right: 0vh;
+  top: 0vh;
   color: white;
   font-family: century gothic;
-  padding: 0 60px;
+  padding: 0vh 0vh;
   display: none;
+  height: 100%;
+  width:100%;
 }
 
 .aboutme p { /* helps quick format text in section*/
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 2vh;
+  line-height: 3.2vh;
   
 }
 
 /*formats box contents of title*/
 .aboutme_left_box{
-  width: 430px; /* how wide box is */
-  height: 470px;
-  padding: 10px; /* space between box bounds and contents */
+  width: 51vh; /* how wide box is */
+  height: 15vh;
+  padding: 0vh; /* space between box bounds and contents */
   text-align: center;
-  margin: auto; /*margins from all sides, bottom defaults to 0.. use px */
   color: white; /*text color*/
   font-family: 'Century Gothic',sans-serif;
-  margin-top: 3%;
-  margin-bottom: 7%;
-  margin-left: -47.5%;
-  margin-right: 0%;
+  margin:0vh 0vh;
+  position: relative;
+  top: 0vh;
+  right: -26vh;
+  
 }
 
 /*formats box contents of title*/
 .aboutme_right_box{
-  width: 750px; /* how wide box is */
-  height: 470px;
+  width: 134vh; /* how wide box is */
+  height: 77vh;
   background: rgba(0, 0, 0, 0.7); /* box color and transpaarancy */
-  padding: 26px; /* space between box bounds and contents */
+  padding: 3vh; /* space between box bounds and contents */
   text-align: left; /*all contents but text*/
   color: white; /*text color*/
   font-family: 'Century Gothic',sans-serif;
-  margin-top: -70%;
-  margin-bottom: 0%;
-  margin-left: 8%;
-  margin-right: 0%;
+  margin: -76vh -36vh;
+  position: relative;
+  top: 0vh;
+  right:-33vh
 }
 
 /*formats boxes for about me*/
 .aboutme_right_box_list{
-  width: 150px;
-  height: 50px;
-  padding: 26px; /* space between box bounds and contents */
+  width: 27vh;
+  height: 23vh;
+  padding: 0vh; /* space between box bounds and contents */
   text-align: left; /*all contents but text*/
   color: white; /*text color*/
   font-family: 'Century Gothic',sans-serif;
-  margin-top: -5%;
-  margin-bottom: 0%;
-  margin-left: 50%;
-  margin-right: 60%;
+  margin: -11vh 0vh;
   z-index: 98; /* load is ontop of everything */
-
+  position: relative; 
+  top: -73vh; 
+  right: -108vh;
 }
 
 .aboutme_left_box_list{
-  width: 150px;
-  height: 50px;
-  padding: 26px; /* space between box bounds and contents */
+  width: 22vh;
+  height: 23vh;
+  padding: 0vh; /* space between box bounds and contents */
   text-align: left; /*all contents but text*/
   color: white; /*text color*/
   font-family: 'Century Gothic',sans-serif;
-  margin-top: -102px;
-  margin-bottom: 0%;
-  margin-left: 20%;
-  margin-right: 0%;
+  margin: -12vh 0vh;
   z-index: 98; /* load is ontop of everything */
-
+  position: relative; 
+  top: -32vh; 
+  right: -105vh;
 }
 /* ```````````````````````````````````````````````````````````````````*/
 
 /* resume section text */
 .resume {
-  position: absolute;
-  right: 0;
-  top: 10px;
+  position: relative;
+  right: 4vh;
+  top: 0vh;
   color: white;
   font-family: verdana;
-  padding: 0 60px;
+  padding: 0vh 0vh;
   display: none;
-
+  width: 142vh;
+  height: 85vh;
 }
 
 .resume p {
@@ -362,7 +356,7 @@ html, body {
 @media only screen and (max-width: 768px) {
 
 	html, body {
-	  font-size: 12px;
+	  font-size: 1.3vhpx;
 	  font-weight: normal;
 	}
 
@@ -496,13 +490,11 @@ body{
 
 /*formats box contents of title*/
 .box_alt{
-  width: 1427px; /* how wide box is */
+  width: 100%; /* how wide box is */
   background-image: url("../images/bg/fun_room_bg.jpg"); /* using image as bg, use .. to go up 1 directory from css */
-  padding: 46px; /* space between box bounds and contents */
+  padding: 9vh; /* space between box bounds and contents */
   text-align: center; /*all contents but text*/
   margin: auto; /*margins from all sides, bottom defaults to 0.. use px */
-  margin-top: 0%; /*top margin*/
-  margin-bottom: 0%; /*bottom margin*/
   color: white; /*text color*/
   font-family: 'Century Gothic',sans-serif;
 }
@@ -523,23 +515,22 @@ body{
 
 /*``````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````*/
 .boxBody_contents_left_1{
-  width: 750px; 
-  height: 450px; 
+  width: 80vh; 
+  height: 58vh; 
   /*background: rgba(0, 0, 0, 0.3); /* box color and transpaarancy */
   text-align: left;
-  margin: 0px;
-  margin-top: 0%;
-  margin-bottom: 5%;
-  margin-left: 3%;
-  margin-right: 0%;
+  margin-top: 0vh;
+  margin-bottom: 10vh;
+  margin-left: 3vh;
+  margin-right: 0vh;
   color: black; 
   font-family: 'Century Gothic',sans-serif;
 }
 
 .boxBody_contents_right_1{
   /*border: 5px solid black;*/
-  height: 130px;
-  width: 750px; 
+  height: 19vh;
+  width: 90vh; 
  /* background: rgba(0, 0, 0, 0.3); /* box color and transpaarancy */
   text-align: left;
   margin: 0px; 
@@ -665,10 +656,15 @@ body{
 
 /*pfp image setting*/
 .box-img{
-  border-radius: 5%; /*roundifies pfp*/
-  width: 370px;
-  height: 450px;
+  border-radius: 3vh; /*roundifies pfp*/
+  width: 50vh;
+  height: 66vh;
   vertical-align: middle;
+  position: relative;
+  top: -2vh;
+  right: 0vh;
+  margin: 0vh -50vh;
+  z-index: 99;
 }
 
 .box h5{
@@ -709,7 +705,7 @@ ul{
 .rainbow {
   
    /* Font options */
-  font-family: 'Pacifico', cursive, bold;
+  font-family: 'Bubblegum Sans', cursive, bold;
   text-shadow: 2px 2px 4px #000000;
   font-size:20px;
   

@@ -1,0 +1,813 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/*asteroid stuff */
+#container {
+    position: absolute;
+	top: 0vh;
+	right: 0vh;
+	height: 99%;
+	width: 76%;
+}
+#my-canvas {
+    background: #000;
+    position: relative;
+	height: 100%;
+	width: 100%
+}
+
+
+/* gif preloader setup */
+.loader {
+  position: fixed; /* wont scroll with scroller */
+  z-index: 99; /* load is ontop of everything */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(59, 64, 70, 1.0);
+  display: flex;
+  justify-content: center; /*h center*/
+  align-items: center; /*vertical center*/
+}
+
+/* home button formatting */
+button {
+  background-image: url(./resources/images/placeholder.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  /* put the height and width of your image here */
+  height: 50px;
+  width: 200px;
+  border: none;
+}
+
+
+.loader > img {
+  width: 100px; /*resize gif for loader*/
+}
+
+.loader.hidden { /*animate fade for loader*/
+	animation: fadeOut 1.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+	100% { /*when load hide loader animation */
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+/*``````````````````````````````````````````````````````````````````````````````````*/
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-size: 1.6vh;
+  font-weight: normal;
+}
+
+/*main bg */
+.background {
+  width: 100%;
+  height: 100%;
+  background-color: #000; /*CHANGED FROM BACKGROUND-IMAGE url(../images/bg/earth_bg.jpg);/*url(../images/bg/home_bg.jpg);*/ /*path needs to be relative to css not html*/ */
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow-y: auto;
+  z-index: 1;
+}
+
+
+/* menu setup */
+.nav {
+  width: 37vh;
+  height: 10vh;
+  /*background-color: gray; REMOVED TO MAKE TRANSPARENT TO BG*/
+  position: relative;
+  top: 6vh; /* menu top down position*/
+  left: 0vh;
+}
+
+.nav a{
+  text-decoration: none;
+  font-size: 6vh; /* instead of pix or percentages, use vh for variable scaling on zoom */
+  font-family: verdana;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  margin: 1% 0%;
+  padding: 5% 16%;
+  float: left;
+  display: inline-block;
+  background-color: black;
+  color: white;
+  line-height: 100%;
+  text-align: center;
+  transition: 200ms;
+}
+
+/* interactive menu hover */
+.nav a:hover { /*home button always white*/
+	background-color: white;
+	color: black;
+	width: 100%;
+}
+
+/* homepage body content */
+.content {
+  position: relative;
+  width: 135vh;
+  height: 80vh;
+  /*background-color: red;*/
+  right: -60vh;
+  top: 2vh;
+}
+
+/* pdf left content */
+.pdf_left {
+  position: relative;
+  width: 70vh;
+  height: 94vh;
+  /*background-color: green;*/
+  right: 0vh;
+  top: 3vh;
+  margin: 0vh 0vh;
+}
+
+/* pdf right content */
+.pdf_right {
+  position: relative;
+  width: 70vh;
+  height: 94vh;
+  /*background-color: green;*/
+  right: 0vh;
+  top: 0vh;
+  margin: -12.2vh 72vh;
+}
+
+/* pdf right content */
+.pdf_text {
+  position: absolute;
+  width: 525px;
+  min-height: 500px;
+  height: 650px;
+  /*background-color: black;*/
+  right: 10%;
+  top: 50%;
+}
+/* ```````````````````````````````````````````````````````````````````*/
+/* home sectiontext */
+.home {
+  position: absolute;
+  right: 0;
+  bottom: 1vh;
+  color: white;
+  font-family: verdana;
+  text-transform: uppercase;
+}
+
+.home h1 {
+  font-size: 8vh;
+  padding-right: 0vh;
+  border-bottom: 1px solid white;
+}
+
+.home h2 {
+  font-size: 3vh;
+  padding: 0vh 0vh;
+
+}
+
+/* ```````````````````````````````````````````````````````````````````*/
+
+/* projects section text */
+.projects {
+  position: relative;
+  right: 0vh;
+  top: 0vh;
+  color: white;
+  font-family: verdana;
+  padding: 0vh 0vh;
+  display: none;
+  height: 75vh;
+}
+
+
+/* image formatting for project gallery section*/
+.projects .image {
+  width: 140vh;
+  margin: -156vh 0vh;
+  float: right;
+  top: 85vh;
+  position: relative;
+
+}
+
+.image img {
+  border-radius: 3vh; /* makes corners round */
+  padding-top: 0vh; /*spacing between images */
+  padding-right: 0vh;
+  width: 34vh; /* changes iamge width*/
+  transition: all ease 0.5s;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+}
+
+.image img:hover {
+  transform: scale(1.1);
+}
+
+/*title section
+.project_header{
+  font-size: 20px;
+  position: absolute;
+  width: 290px;
+  min-height: 75px;
+  height: 75px;
+  background-color: green;
+  right: 37.5%;
+  top: -6%;
+  font-family: verdana;
+  text-transform: uppercase;
+}
+*/
+/* menu for projects */
+.projects_box{
+  width: 500px; /* how wide box is */
+  background: rgba(0, 0, 0, 0.7); /* box color and transpaarancy */
+  padding: 15px; /* space between box bounds and contents */
+  text-align: center;
+  margin: auto; /*margins from all sides, bottom defaults to 0.. use px */
+  margin-top: 2%; /*top margin*/
+  margin-bottom: 2%; /*bottom margin*/
+  color: white; /*text color*/
+  font-family: 'Century Gothic',sans-serif;
+}
+
+/* box to contain links for project sites */
+.projects_link_left {
+  height: 30vh;
+  width: 18vh; /* how wide box is */
+  text-align: center;
+  font-family: 'Century Gothic',sans-serif;
+}
+
+.projects_link_right {
+  height: 30vh;
+  width: 18vh; /* how wide box is */
+  text-align: center;
+  font-family: 'Century Gothic',sans-serif;
+}
+
+.projects_img {
+  border-radius: 10%; /*roundifies pfp*/
+  width: 85px;
+  height: 50px;
+  vertical-align: middle;
+}
+/* ```````````````````````````````````````````````````````````````````*/
+
+/* about me section text */
+.aboutme {
+  position: relative;
+  right: 0vh;
+  top: 0vh;
+  color: white;
+  font-family: century gothic;
+  padding: 0vh 0vh;
+  display: none;
+  height: 100%;
+  width:100%;
+}
+
+.aboutme p { /* helps quick format text in section*/
+  font-size: 2vh;
+  line-height: 3.2vh;
+  
+}
+
+/*formats box contents of title*/
+.aboutme_left_box{
+  width: 51vh; /* how wide box is */
+  height: 15vh;
+  padding: 0vh; /* space between box bounds and contents */
+  text-align: center;
+  color: white; /*text color*/
+  font-family: 'Century Gothic',sans-serif;
+  margin:0vh 0vh;
+  position: relative;
+  top: 0vh;
+  right: -26vh;
+  
+}
+
+/*formats box contents of title*/
+.aboutme_right_box{
+  width: 134vh; /* how wide box is */
+  height: 77vh;
+  background: rgba(0, 0, 0, 0.7); /* box color and transpaarancy */
+  padding: 3vh; /* space between box bounds and contents */
+  text-align: left; /*all contents but text*/
+  color: white; /*text color*/
+  font-family: 'Century Gothic',sans-serif;
+  margin: -76vh -36vh;
+  position: relative;
+  top: 0vh;
+  right:-33vh
+}
+
+/*formats boxes for about me*/
+.aboutme_right_box_list{
+  width: 27vh;
+  height: 23vh;
+  padding: 0vh; /* space between box bounds and contents */
+  text-align: left; /*all contents but text*/
+  color: white; /*text color*/
+  font-family: 'Century Gothic',sans-serif;
+  margin: -11vh 0vh;
+  z-index: 98; /* load is ontop of everything */
+  position: relative; 
+  top: -73vh; 
+  right: -108vh;
+}
+
+.aboutme_left_box_list{
+  width: 22vh;
+  height: 23vh;
+  padding: 0vh; /* space between box bounds and contents */
+  text-align: left; /*all contents but text*/
+  color: white; /*text color*/
+  font-family: 'Century Gothic',sans-serif;
+  margin: -12vh 0vh;
+  z-index: 98; /* load is ontop of everything */
+  position: relative; 
+  top: -32vh; 
+  right: -105vh;
+}
+/* ```````````````````````````````````````````````````````````````````*/
+
+/* resume section text */
+.resume {
+  position: relative;
+  right: 4vh;
+  top: 0vh;
+  color: white;
+  font-family: verdana;
+  padding: 0vh 0vh;
+  display: none;
+  width: 142vh;
+  height: 85vh;
+}
+
+.resume p {
+  font-size: 18px;
+  line-height: 28px;
+  
+}
+
+/* for mobile support */
+@media only screen and (max-width: 768px) {
+
+	html, body {
+	  font-size: 1.3vhpx;
+	  font-weight: normal;
+	}
+
+	.nav a {
+		font-size: 9px;
+		width: 18%;
+		height: 25px;
+		line-height: 20px;
+		padding: 0 5px;
+		margin: 0 6px; /* mobile menu padding */
+	}
+	
+	.nav a:hover {
+	  width: auto;
+	}
+	
+	.nav {
+	   width: 100%;
+	   top: 20px;
+	   z-index: 99;
+	}
+	
+	.home h1 {
+	  font-size: 22px;
+	  padding-right: 0;
+	  border-bottom: none;
+	}
+	
+	.home h2 { /* secondary main menu title font */
+	  font-size: 14px;
+	  padding: 86px 0;
+	}
+	
+	.content { /* main text for mobile*/
+	  width: 100%;
+	  height: 100%;
+	  top: -30px;
+	  min-height: inherit;
+	  right: 0%;
+	}
+	
+	.home {
+	  left: 0;
+	  text-align: center;
+	  bottom: 50px;
+	}
+	
+	.background {
+	  background-position: center;
+	}
+	
+	.projects {
+	  width: 90%;
+	  margin: 0 auto;
+	  padding: 100px 0 0;
+	  top: 0;
+	  left: 0;
+	}
+	
+	/*.projects p {
+	  font-size: 14px;
+	} */
+	
+	.projects .image {
+	  width: 95%;
+	  margin: 3%;
+	  float: left;
+	}
+	
+	
+	.aboutme {
+	  width: 90%;
+	  margin: 0 auto;
+	  padding: 100px 0 0;
+	  top: 0;
+	  left: 0;
+	}
+	
+	.aboutme p {
+	  font-size: 14px;
+	}
+	
+	.resume {
+	  width: 90%;
+	  margin: 0 auto;
+	  padding: 100px 0 0;
+	  top: 0;
+	  left: 0;
+	}
+	
+	.resume p {
+	  font-size: 14px;
+	}
+}
+
+/*````````````````````````````````````````````````````````````````````````````````````````````*/
+/* used for parallax effect */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  background: #f9f9f9;
+  font-size: 24px;
+  padding: 25px;
+}
+
+.parallax {
+  min-height: 300px; /* hight per parallax image */
+  background: transparent;
+}
+
+/* used to make main page look nice */
+body{
+  margin: 0;
+  padding: 0;
+  /*background: url(./resources/images/profile.jpg) no-repeat;*/
+  background-repeat: repeat;
+}
+
+/*formats box contents of title*/
+.box{
+  width: 1427px; /* how wide box is */
+  background: rgba(0, 0, 0, 0.7); /* box color and transpaarancy */
+  padding: 46px; /* space between box bounds and contents */
+  text-align: center; /*all contents but text*/
+  margin: auto; /*margins from all sides, bottom defaults to 0.. use px */
+  margin-top: 0%; /*top margin*/
+  margin-bottom: 0%; /*bottom margin*/
+  color: white; /*text color*/
+  font-family: 'Century Gothic',sans-serif;
+}
+
+/*formats box contents of title*/
+.box_alt{
+  width: 100%; /* how wide box is */
+  background-image: url("../images/bg/fun_room_bg.jpg"); /* using image as bg, use .. to go up 1 directory from css */
+  padding: 9vh; /* space between box bounds and contents */
+  text-align: center; /*all contents but text*/
+  margin: auto; /*margins from all sides, bottom defaults to 0.. use px */
+  color: white; /*text color*/
+  font-family: 'Century Gothic',sans-serif;
+}
+
+/*formats box contents of for body structure*/
+.boxBody{
+  width: auto; /* how wide box is */
+  height: auto;
+  background: rgba(255, 176, 176, 0.18); /* box color and transpaarancy */
+  padding: 15px; /* space between box bounds and contents */
+  text-align: center; /*all contents but text*/
+  margin: auto; /*margins from all sides, bottom defaults to 0.. use px */
+  margin-top: auto; /*top margin*/
+  margin-bottom: auto; /*bottom margin*/
+  color: black; /*text color*/
+  font-family: 'Century Gothic',sans-serif;
+}
+
+/*``````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````*/
+.boxBody_contents_left_1{
+  width: 80vh; 
+  height: 58vh; 
+  /*background: rgba(0, 0, 0, 0.3); /* box color and transpaarancy */
+  text-align: left;
+  margin-top: 0vh;
+  margin-bottom: 10vh;
+  margin-left: 3vh;
+  margin-right: 0vh;
+  color: black; 
+  font-family: 'Century Gothic',sans-serif;
+}
+
+.boxBody_contents_right_1{
+  /*border: 5px solid black;*/
+  height: 19vh;
+  width: 90vh; 
+ /* background: rgba(0, 0, 0, 0.3); /* box color and transpaarancy */
+  text-align: left;
+  margin: 0px; 
+  margin-top: -34%;
+  margin-bottom: 19%;
+  margin-left: 45%;
+  margin-right: 60%;
+  color: black; 
+  font-family: 'Century Gothic',sans-serif;
+}
+
+.boxBody_contents_left_2{
+  width: 750px; 
+  height: 450px; 
+  background: rgba(0, 0, 0, 0.3); /* box color and transpaarancy */
+  text-align: left;
+  margin: 0px;
+  margin-top: 1%;
+  margin-bottom: 0%;
+  margin-left: 3%;
+  margin-right: 0%;
+  color: black; 
+  font-family: 'Century Gothic',sans-serif;
+}
+
+.boxBody_contents_right_2{
+  width: 750px; 
+  background: rgba(0, 0, 0, 0.3); /* box color and transpaarancy */
+  text-align: left;
+  margin: 0px; 
+  margin-top: -25%;
+  margin-bottom: 15%;
+  margin-left: 45%;
+  margin-right: 60%;
+  color: black; 
+  font-family: 'Century Gothic',sans-serif;
+}
+
+.boxBody_contents_left_3{
+  width: 750px; 
+  height: 450px; 
+  background: rgba(0, 0, 0, 0.3); /* box color and transpaarancy */
+  text-align: left;
+  margin: 0px;
+  margin-top: 1%;
+  margin-bottom: 0%;
+  margin-left: 3%;
+  margin-right: 0%;
+  color: black; 
+  font-family: 'Century Gothic',sans-serif;
+}
+
+.boxBody_contents_right_3{
+  width: 750px; 
+  background: rgba(0, 0, 0, 0.3); /* box color and transpaarancy */
+  text-align: left;
+  margin: 0px; 
+  margin-top: -25%;
+  margin-bottom: 15%;
+  margin-left: 45%;
+  margin-right: 60%;
+  color: black; 
+  font-family: 'Century Gothic',sans-serif;
+}
+
+.boxBody_contents_left_4{
+  width: 750px; 
+  height: 450px; 
+  background: rgba(0, 0, 0, 0.3); /* box color and transpaarancy */
+  text-align: left;
+  margin: 0px;
+  margin-top: 1%;
+  margin-bottom: 0%;
+  margin-left: 3%;
+  margin-right: 0%;
+  color: black; 
+  font-family: 'Century Gothic',sans-serif;
+}
+
+.boxBody_contents_right_4{
+  width: 750px; 
+  background: rgba(0, 0, 0, 0.3); /* box color and transpaarancy */
+  text-align: left;
+  margin: 0px; 
+  margin-top: -25%;
+  margin-bottom: 15%;
+  margin-left: 45%;
+  margin-right: 60%;
+  color: black; 
+  font-family: 'Century Gothic',sans-serif;
+}
+
+.boxBody_contents_left_5{
+  width: 750px; 
+  height: 450px; 
+  background: rgba(0, 0, 0, 0.3); /* box color and transpaarancy */
+  text-align: left;
+  margin: 0px;
+  margin-top: 1%;
+  margin-bottom: 0%;
+  margin-left: 3%;
+  margin-right: 0%;
+  color: black; 
+  font-family: 'Century Gothic',sans-serif;
+}
+
+.boxBody_contents_right_5{
+  width: 750px; 
+  background: rgba(0, 0, 0, 0.3); /* box color and transpaarancy */
+  text-align: left;
+  margin: 0px; 
+  margin-top: -25%;
+  margin-bottom: 15%;
+  margin-left: 45%;
+  margin-right: 60%;
+  color: black; 
+  font-family: 'Century Gothic',sans-serif;
+}
+
+
+
+/*``````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````*/
+
+/*pfp image setting*/
+.box-img{
+  border-radius: 3vh; /*roundifies pfp*/
+  width: 50vh;
+  height: 66vh;
+  vertical-align: middle;
+  position: relative;
+  top: -2vh;
+  right: 0vh;
+  margin: 0vh -50vh;
+  z-index: 99;
+}
+
+.box h5{
+  background: rgba(0, 0, 1, 0.7); /* to denote clickable buttons later*/
+  font-size: 20px;
+  letter-spacing: 3px;
+  font-weight: 100;
+}
+
+.box p{
+  text-align: center;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+.box li{
+  display: inline-block;
+  margin: 6px;
+  list-style: none;
+}
+.box li a{
+  color: white;
+  text-decoration: none;
+  font-size: 60px;
+  transition: all ease-in-out 250ms;
+}
+
+/* makes hovering over box links change color */
+.box li a:hover{
+  color: #b9b9b9;
+}
+
+
+
+.rainbow {
+  
+   /* Font options */
+  font-family: 'Bubblegum Sans', cursive, bold;
+  text-shadow: 2px 2px 4px #000000;
+  font-size:20px;
+  
+   /* Chrome, Safari, Opera */
+  -webkit-animation: rainbow 5s infinite; 
+  
+  /* Internet Explorer */
+  -ms-animation: rainbow 5s infinite;
+  
+  /* Standar Syntax */
+  animation: rainbow 5s infinite; 
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes rainbow{
+  0%{color: orange;}	
+  10%{color: purple;}	
+	20%{color: red;}
+  30%{color: CadetBlue;}
+	40%{color: yellow;}
+  50%{color: coral;}
+	60%{color: green;}
+  70%{color: cyan;}
+  80%{color: DeepPink;}
+  90%{color: DodgerBlue;}
+	100%{color: orange;}
+}
+
+/* Internet Explorer */
+@-ms-keyframes rainbow{
+   0%{color: orange;}	
+  10%{color: purple;}	
+	20%{color: red;}
+  30%{color: CadetBlue;}
+	40%{color: yellow;}
+  50%{color: coral;}
+	60%{color: green;}
+  70%{color: cyan;}
+  80%{color: DeepPink;}
+  90%{color: DodgerBlue;}
+	100%{color: orange;}
+}
+
+/* Standar Syntax */
+@keyframes rainbow{
+    0%{color: orange;}	
+  10%{color: purple;}	
+	20%{color: red;}
+  30%{color: CadetBlue;}
+	40%{color: yellow;}
+  50%{color: coral;}
+	60%{color: green;}
+  70%{color: cyan;}
+  80%{color: DeepPink;}
+  90%{color: DodgerBlue;}
+	100%{color: orange;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

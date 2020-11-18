@@ -24,6 +24,8 @@
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/webglbuilds.json", {onProgress: UnityProgress});
     </script>
 	
+	<script src="https://chatwee-api.com/v2/script/5fb02ad9baeac75aac315e02.js"></script>
+
   </head>
   
   <!-- init body section with params -->
@@ -44,13 +46,14 @@
 	</script>
 	
 					
-	<div class="projects_link_left" style="float:left; margin:10px">
-		<img src="./resources/images/back.png" alt="" class="projects_img">
-		<a href="index.html" style="color:white"><b>Back to Home</b></a>
+	<div class="projects_link_left" style="float:left; margin:3vh 3vh">
+		<a href="index.html"><img src="./resources/images/back.png" style="width: 20vh; height: 10vh; border-radius: 3vh;"></a>
+		<a href="index.html" style="color:white"><b>Github</b></a>
+
 	</div>
 	
-	<div class="projects_link_right" style="float:right; margin:10px">
-		<img src="./resources/images/github.png" alt="" class="projects_img">
+	<div class="projects_link_right" style="float:right; margin:3vh 3vh">
+		<a href="https://github.com/kyeung7"><img src="./resources/images/github.png" style="width: 20vh; height: 10vh; border-radius: 3vh;"></a>
 		<a href="https://github.com/kyeung7" style="color:white"><b>Github</b></a>
 	</div>
 	
@@ -58,7 +61,7 @@
 	<div class="box_alt">
 
 		
-		<span style="font-size:40px"> <b>Game Room</b> </span>
+		<span style="font-size: 7vh"> <b>Game Room</b> </span>
 		<p><i>Feel free to explore ... Link to Github is in the top right corner of the site!<br>Be nice and give some ideas for future updates! </i></p>
 				
 	</div>
@@ -66,21 +69,21 @@
     <!-- parallax scroll effect window ..... replace first with my logo and title the rest with game/project images -->
 		<div class="boxBody">
 
-			<h2 style="margin:10px"> Featured Game: Minecraft <i>(NOW WITH MULTIPLAYER)</i><br></h2> <!-- style param to make title look nicer with more space-->
+			<h2 style="margin: 1vh"> Featured Game: Minecraft <i>(NOW WITH MULTIPLAYER)</i><br></h2> <!-- style param to make title look nicer with more space-->
 			<h2> </h2>
 
 			<div class="boxBody_contents_left_1">
 			
-				<div class="webgl-content">
-				  <div id="unityContainer" style="width: 600px; height: 400px; position: absolute; margin: 0px;"></div>
-				  <div class="footer">
+				<div class="webgl-content" style = "position: relative; width: 80vh; height: 40vh">
+				  <div id="unityContainer" style="width: 80vh; height: 40hv; position: relative; margin: 0px;"></div>
+				  <div class="footer" style="position: relative;width: auto;height: 6vh;">
 					<div class="webgl-logo"></div>
-					<img src="./TemplateData/fullscreen.png" style="color: green; width: 30px; height: 30px; position: relative; bottom: 0px; right: -570px;" />
+					<img src="./TemplateData/fullscreen.png" style="color: green; width: 30px; height: 30px; position: relative; bottom: 0px; right: 0vh;" />
 
-					<div class="fullscreen" style="color: green; width: 30px; height: 30px; position: relative; bottom: 33px; right: -570px;" onclick="unityInstance.SetFullscreen(1)">
+					<div class="fullscreen" style="color: green; width: 30px; height: 30px; position: relative; bottom: 33px; right: 0vh;" onclick="unityInstance.SetFullscreen(1)">
 					</div>
 					
-					<div class="rainbow" style=" width: auto; height: auto; position: relative; top: 175px; right: -626px;"> Try out the new multiplayer version below! (Requires a good internet connection)</div>
+					<div class="rainbow" style=" width: 52vh; height: auto; position: relative; top: -39vh; right: -135vh;"> Try out the new multiplayer version below! (Requires a good internet connection)</div>
 				  </div>
 			  </div>	
 			  
@@ -102,7 +105,7 @@
 				<br>ESC Key: Open up settings/Exit fullscreen
 				<br>R/I Key: Open up inventory
 				
-				<div class="image" style="width: 750px; height: 180px; position: relative; top: 49px; right: -290px;">
+				<div class="image" style="width: 35vh; height: 27vh; position: relative; top: 3vh; right: -30vh;">
 					<a href="https://classic.minecraft.net/">
 					<img src="./resources/images/icons/mc.png" />
 					</a>
@@ -117,7 +120,7 @@
 			<h2 style="margin:6px">Among Us - 3D</h2>
 			
 			<div class="boxBody_contents_left_1">
-			  <img src="./resources/images/projects/among.gif" width=600 height=380/>
+			  <img src="./resources/images/projects/among.gif" style="width: 81vh; height: 49vh; position: relative; top: 1vh; right: 0vh;">
 			</div>
 			
 
@@ -133,9 +136,9 @@
 				<br>Mouse/Trackpad: Look around
 				<br>Space Bar: Lock Doors
 		
-				<div class="rainbow" style=" width: auto; height: auto; position: relative; top: 50px; right: -194px;"> Try it out for yourself! Click on "MODO LIBRE" </div>
+				<div class="rainbow" style=" width: 88vh; height: auto; position: relative; top: 0vh; right: -0vh;"> Try it out for yourself! Click on "MODO LIBRE" </div>
 
-				<div class="image" style="width: 750px; height: 180px; position: relative; top: 75px; right: -305px;">
+				<div class="image" style="width: auto; height: auto; position: relative; top: 3vh; right: -33vh;">
 					<a href="https://v6p9d9t4.ssl.hwcdn.net/html/2853783/index.html">
 						<img src="./resources/images/icons/among.jpg" />
 					</a>
@@ -150,7 +153,10 @@
 					
 			<h2>Global Chat - Post any suggestions/requests here!</h2>
 			<p>Content is heavily moderated, there is a zero-tolerance policy when it comes to cybersecurity and integrity.</p>
-			<iframe src="https://xat.com/embed/chat.php#id=220484088&gn=Group9980282820193" width="1000" height="600" frameborder="0" scrolling="no"></iframe><br>
+
+			<iframe src="https://minnit.chat/LiveChatAlpha?embed&&nickname=" style="height:80vh;width: 170vh;"" allowTransparency="true"></iframe><br>
+			
+			<!--iframe src="https://xat.com/embed/chat.php#id=220484088&gn=Group9980282820193" width="1000" height="600" frameborder="0" scrolling="no"></iframe--><br>
 			
 					<img src="./resources/images/projects/name/0.gif" alt="" class="animateImagex" style="position: relative; width: 300px; height: 255px;">
 					<img src="./resources/images/projects/name/1.gif" alt="" class="animateImagex" style="position: relative; width: 300px; height: 255px;">
