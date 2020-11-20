@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 <!--make s mobile friendly-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+	<!-- title and initial site resource setup -->
+    <title>Homepage | Kevin's Website</title>
+	<link rel="stylesheet" type="text/css" href="./resources/css/classStyle.css">
+	
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');</script>
+	<script src="https://cdn.logwork.com/widget/countdown.js"></script>
+  
+  </head>
+  <body>
+	
+	
+	<!-- gif animation while preloading content -->
+	<div class="loader">
+	  <img src="./resources/images/load.gif" alt="Loading..." />
+	</div>
+	
+	<!-- javascript event listener-->
+	<script type="text/javascript">
+	  window.addEventListener("load", function(){
+	    const loader = document.querySelector(".loader");
+		console.log(loader);
+		loader.className += " hidden"; //class "loader hidden"
+	  });
+	</script>
+	
+	<div class="background">
+	
+	<!-- nav menu -->
+	<div class="nav">
+	    <a class="a" href="#">🏠 Homepage</a> 
+	    <a class="b" href="#">🌡️ Weather</a>
+	    <a class="c" href="#">🦃 Countdown</a>
+	    <a class="d" href="#">🎅 Countdown</a>
+	    <a class="e" href="#">❄️ Countdown</a>
+	    <a class="f" href="#">🌳 Countdown</a>
+		<a class="g" href="#">⛱️ Countdown</a>
+		<a class="h" href="#">✉️ Updates</a>
+		<a class="i" href="#">🎬 Credits</a>
+	</div>
+	  
+	<!-- homepage body -->
+	<div class="content">
+	  
+		<!-- home section content ... add links later-->
+		<div class="home">
+			<h1>✨𝓤𝓷𝓸𝓯𝓯𝓲𝓬𝓲𝓪𝓵 𝓒𝓵𝓪𝓼𝓼 𝓟𝓪𝓰𝓮✨</h1>
+			<h2><i>Welcome - Leave a message if you want more stuff added 👍</i></h2>
+		</div>
+		
+		<!-- weather section content -->
+		<div class="weather">
+			<a style="z-index:99;" class="weatherwidget-io" href="https://forecast7.com/en/44d81n73d09/05478/?unit=us" data-label_1="Saint Albans, VT" data-label_2="Weather" data-icons="Climacons Animated" data-theme="weather_one" >Saint Albans, VT Weather</a>
+			<div class="background1"></div>
+		
+		</div>
+
+		<!-- thanksgiving section content -->
+		<div class="count_0">
+			<a href="https://logwork.com/countdown-21xd" style="position: relative;overflow: hidden;display: inline-block;width: 100%;height: 153px;top: -35vh;right: 9vh;" class="countdown-timer" data-timezone="America/New_York" data-textcolor="#000000" data-date="2020-11-24 15:10" data-background="#b87446" data-digitscolor="#ffffff">Days until Thanksgiving Break</a>
+		</div>
+		
+		<!-- xmas section content -->
+		<div class="count_1">
+			<a href="https://logwork.com/countdown-21yq" style="position: relative;overflow: hidden;display: inline-block;width: 100%;height: 153px;top: -35vh;right: 9vh;" class="countdown-timer" data-timezone="America/New_York" data-textcolor="#69d5db" data-date="2020-12-22 15:10" data-background="#ff0000" data-digitscolor="#3bc211">Days until Christmas Break</a>
+		</div>
+		
+		<!-- winter break section content -->
+		<div class="count_2">
+			<a href="https://logwork.com/countdown-21ys" style="position: relative;overflow: hidden;display: inline-block;width: 100%;height: 153px;top: -35vh;right: 9vh;" class="countdown-timer" data-timezone="America/New_York" data-textcolor="#7391e6" data-date="2021-02-19 15:10" data-background="#63f0f0" data-digitscolor="#ffffff">Days until Winter Break</a>
+		</div>
+		
+		<!-- Spring break section content -->
+		<div class="count_3">
+			<a href="https://logwork.com/countdown-21y7" style="position: relative;overflow: hidden;display: inline-block;width: 100%;height: 153px;top: -35vh;right: 9vh;" class="countdown-timer" data-timezone="America/New_York" data-textcolor="#7de364" data-date="2021-04-15 15:10" data-background="#43cc5f" data-digitscolor="#f5f5f5">Days until Spring Break</a>
+		</div>
+		
+		<!-- Summer break section content -->
+		<div class="count_4">
+			<a href="https://logwork.com/countdown-21yx" style="position: relative;overflow: hidden;display: inline-block;width: 100%;height: 153px;top: -35vh;right: 9vh;" class="countdown-timer" data-timezone="America/New_York" data-textcolor="#1489cc" data-date="2021-06-14 15:10" data-background="#e8db23" data-digitscolor="#fa8e00">Days until Summer Vacation</a>
+		</div>
+		
+		<!-- news/messages section content -->
+		<div class="news" style="position: relative; height: 45vh; top: -50vh; margin: 0vh 0vh;">
+			<!--h2 style="position: relative;height: 10vh;width: 10vh;top: 48vh;">Global Chat - Post any suggestions/requests here!</h2>
+			<p style="position: relative;height: 10vh;width: 10vh;top: 48vh;">Content is heavily moderated, there is a zero-tolerance policy when it comes to cybersecurity and integrity.</p> -->
+
+			<iframe src="https://minnit.chat/LiveChatAlpha?embed&&nickname=" style="height:80vh; width: 130vh;"" allowTransparency="true"></iframe><br>
+		</div>
+		
+		<!-- credits section content -->
+		<div class="credits" style="position: relative; height: 44vh; top: -90vh; margin: 0vh 0vh;">
+			<!--h2 style="position: relative;height: 10vh;width: 10vh;top: 48vh;">Global Chat - Post any suggestions/requests here!</h2>-->
+
+		</div>
+		
+		</div>
+	</div>
+	
+	<!-- for live update effect on main page and click handling-->
+	<script type="text/javascript" src="./resources/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+	  $(document).ready(function(){
+	    $("a").click(function(){
+		  //alert("clicked");
+		  var selected = $(this);
+		  $("a").removeClass(".active");
+		  $(selected).addClass("active");
+		});
+		
+		// used for changing visual upon highlight
+		var $a = $(".a"), // a corresponds to home screen
+		$b = $(".b"), //b corresponds to weather
+		$c = $(".c"),
+		$d = $(".d"),
+		$e = $(".e"),
+		$f = $(".f"),
+		$g = $(".g"),
+		$h = $(".h"),
+		$i = $(".i"),
+		$home = $(".home"),
+		$weather = $(".weather"),
+		$count_0 = $(".count_0"),
+		$count_1 = $(".count_1"),
+		$count_2 = $(".count_2"),
+		$count_3 = $(".count_3"),
+		$count_4 = $(".count_4"),
+		$news = $(".news"),
+		$credits = $(".credits");
+		
+		$a.click(function(){ // on click home show home and remove others...
+		  $home.fadeIn();
+		  $weather.fadeOut();
+		  $count_0.fadeOut();
+		  $count_1.fadeOut();
+		  $count_2.fadeOut();
+		  $count_3.fadeOut();
+		  $count_4.fadeOut();
+		  $news.fadeOut();
+		  $credits.fadeOut();
+		});
+		$b.click(function(){ // on click home, update accordingly...
+		  $home.fadeOut();
+		  $weather.fadeIn();
+		  $count_0.fadeOut();
+		  $count_1.fadeOut();
+		  $count_2.fadeOut();
+		  $count_3.fadeOut();
+		  $count_4.fadeOut();
+		  $news.fadeOut();
+		  $credits.fadeOut();
+		});
+		$c.click(function(){
+		  $home.fadeOut();
+		  $weather.fadeOut();
+		  $count_0.fadeIn();
+		  $count_1.fadeOut();
+		  $count_2.fadeOut();
+		  $count_3.fadeOut();
+		  $count_4.fadeOut();
+		  $news.fadeOut();
+		  $credits.fadeOut();
+		});
+		$d.click(function(){
+		  $home.fadeOut();
+		  $weather.fadeOut();
+		  $count_0.fadeOut();
+		  $count_1.fadeIn();
+		  $count_2.fadeOut();
+		  $count_3.fadeOut();
+		  $count_4.fadeOut();
+		  $news.fadeOut();
+		  $credits.fadeOut();
+		});
+		$e.click(function(){
+		  $home.fadeOut();
+		  $weather.fadeOut();
+		  $count_0.fadeOut();
+		  $count_1.fadeOut();
+		  $count_2.fadeIn();
+		  $count_3.fadeOut();
+		  $count_4.fadeOut();
+		  $news.fadeOut();
+		  $credits.fadeOut();
+		});
+		$f.click(function(){
+		  $home.fadeOut();
+		  $weather.fadeOut();
+		  $count_0.fadeOut();
+		  $count_1.fadeOut();
+		  $count_2.fadeOut();
+		  $count_3.fadeIn();
+		  $count_4.fadeOut();
+		  $news.fadeOut();
+		  $credits.fadeOut();
+		});
+		$g.click(function(){
+		  $home.fadeOut();
+		  $weather.fadeOut();
+		  $count_0.fadeOut();
+		  $count_1.fadeOut();
+		  $count_2.fadeOut();
+		  $count_3.fadeOut();
+		  $count_4.fadeIn();
+		  $news.fadeOut();
+		  $credits.fadeOut();
+		});
+		$h.click(function(){
+		  $home.fadeOut();
+		  $weather.fadeOut();
+		  $count_0.fadeOut();
+		  $count_1.fadeOut();
+		  $count_2.fadeOut();
+		  $count_3.fadeOut();
+		  $count_4.fadeOut();
+		  $news.fadeIn();
+		  $credits.fadeOut();
+		});
+		$i.click(function(){
+		  $home.fadeOut();
+		  $weather.fadeOut();
+		  $count_0.fadeOut();
+		  $count_1.fadeOut();
+		  $count_2.fadeOut();
+		  $count_3.fadeOut();
+		  $count_4.fadeOut();
+		  $news.fadeOut();
+		  $credits.fadeIn();
+		});
+	  });
+	  
+	</script>
+	
+  </body>
+</html>
