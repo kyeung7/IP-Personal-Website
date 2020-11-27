@@ -1,0 +1,426 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+
+/* gif preloader setup */
+.loader {
+  position: fixed; /* wont scroll with scroller */
+  z-index: 99; /* load is ontop of everything */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(59, 64, 70, 1.0);
+  display: flex;
+  justify-content: center; /*h center*/
+  align-items: center; /*vertical center*/
+}
+
+/* home button formatting */
+button {
+  background-image: url(./resources/images/placeholder.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  /* put the height and width of your image here */
+  height: 50px;
+  width: 200px;
+  border: none;
+}
+
+
+.loader > img {
+  width: 100px; /*resize gif for loader*/
+}
+
+.loader.hidden { /*animate fade for loader*/
+	animation: fadeOut 1.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+	100% { /*when load hide loader animation */
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+/*``````````````````````````````````````````````````````````````````````````````````*/
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-size: 1.6vh;
+  font-weight: normal;
+}
+
+/*``````````````````````````````````````````````````````````````````````````````````*/
+/*main bg */
+.background0 {
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/bg/class0_bg.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow-y: auto;
+  z-index: 1;
+}
+
+.background1 {
+  width: 150%;
+  height: 125%;
+  background-image: url(../images/bg/class1_bg.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: 2;
+  top: -19vh;
+  right: -36.4vh;
+}
+
+.background2 {
+  width: 150%;
+  height: 125%;
+  background-image: url(../images/bg/class2_bg.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: 2;
+  top: -19vh;
+  right: -36.4vh;
+}
+
+.background3 {
+  width: 150%;
+  height: 125%;
+  background-image: url(../images/bg/class3_bg.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: 2;
+  top: -19vh;
+  right: -36.4vh;
+}
+
+.background4 {
+  width: 150%;
+  height: 125%;
+  background-image: url(../images/bg/class4_bg.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: 2;
+  top: -19vh;
+  right: -36.4vh;
+}
+
+.background5 {
+  width: 150%;
+  height: 125%;
+  background-image: url(../images/bg/class5_bg.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: 2;
+  top: -19vh;
+  right: -36.4vh;
+}
+
+.background6 {
+  width: 150%;
+  height: 125%;
+  background-image: url(../images/bg/class6_bg.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: 2;
+  top: -19vh;
+  right: -36.4vh;
+}
+
+.background7 {
+  width: 150%;
+  height: 125%;
+  background-image: url(../images/bg/class7_bg.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: 2;
+  top: -19vh;
+  right: -36.4vh;
+}
+
+.background8 {
+  width: 150%;
+  height: 125%;
+  background-image: url(../images/bg/class8_bg.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: 2;
+  top: -19vh;
+  right: -36.4vh;
+}
+
+
+
+/*``````````````````````````````````````````````````````````````````````````````````*/
+
+/* menu setup */
+.nav {
+  width: 37vh;
+  height: 10vh;
+  /*background-color: gray; REMOVED TO MAKE TRANSPARENT TO BG*/
+  position: relative;
+  top: 18vh; /* menu top down position*/
+  left: 0vh;
+  z-index: 99;
+}
+
+.nav a{
+  text-decoration: none;
+  font-size: 3vh; /* instead of pix or percentages, use vh for variable scaling on zoom */
+  font-family: verdana;
+  font-weight: bold;
+  width: 80%;
+  height: 40%;
+  margin: 1% 0%;
+  padding: 3% 10%;
+  float: left;
+  display: inline-block;
+  background-color: black;
+  color: white;
+  line-height: 100%;
+  text-align: center;
+  transition: 300ms;
+}
+
+/* interactive menu hover */
+.nav a:hover { /*home button always white*/
+	background-color: white;
+	color: black;
+	width: 100%;
+}
+
+/* homepage body content */
+.content {
+  position: relative;
+  width: 135vh;
+  height: 80vh;
+  /*background-color: red;*/
+  right: -60vh;
+  top: 2vh;
+}
+
+/* ```````````````````````````````````````````````````````````````````*/
+/* home sectiontext */
+.home {
+  position: absolute;
+  text-align: right;
+  bottom: 1vh;
+  color: white;
+  font-family: verdana;
+  text-transform: uppercase;
+}
+
+.home h1 {
+  font-size: 8vh;
+  padding-right: 0vh;
+  border-bottom: 0.5vh solid white;
+}
+
+.home h2 {
+  font-size: 3vh;
+  padding: 0vh 0vh;
+
+}
+
+/* ```````````````````````````````````````````````````````````````````*/
+
+/* weather section text */
+.weather {
+  position: relative;
+  right: 30vh;
+  top: 7vh;
+  color: white;
+  font-family: verdana;
+  padding: 0vh 0vh;
+  display: none;
+  height: 100%;
+  width: 100%;
+
+}
+
+
+/* ```````````````````````````````````````````````````````````````````*/
+.count_0 {
+  position: relative;
+  right: 0vh;
+  top: 0vh;
+  color: white;
+  font-family: century gothic;
+  padding: 0vh 0vh;
+  display: none;
+  height: 100%;
+  width:100%;
+}
+
+.count_0 p { /* helps quick format text in section*/
+  font-size: 2vh;
+  line-height: 3.2vh;
+  
+}
+
+/* ```````````````````````````````````````````````````````````````````*/
+.count_1 {
+  position: relative;
+  right: 0vh;
+  top: 0vh;
+  color: white;
+  font-family: century gothic;
+  padding: 0vh 0vh;
+  display: none;
+  height: 100%;
+  width:100%;
+}
+
+.count_1 p { /* helps quick format text in section*/
+  font-size: 2vh;
+  line-height: 3.2vh;
+  
+}
+
+/* ```````````````````````````````````````````````````````````````````*/
+.count_2 {
+  position: relative;
+  right: 0vh;
+  top: 0vh;
+  color: white;
+  font-family: century gothic;
+  padding: 0vh 0vh;
+  display: none;
+  height: 100%;
+  width:100%;
+}
+
+.count_2 p { /* helps quick format text in section*/
+  font-size: 2vh;
+  line-height: 3.2vh;
+  
+}
+
+/* ```````````````````````````````````````````````````````````````````*/
+.count_3 {
+  position: relative;
+  right: 0vh;
+  top: 0vh;
+  color: white;
+  font-family: century gothic;
+  padding: 0vh 0vh;
+  display: none;
+  height: 100%;
+  width:100%;
+}
+
+.count_3 p { /* helps quick format text in section*/
+  font-size: 2vh;
+  line-height: 3.2vh;
+  
+}
+
+/* ```````````````````````````````````````````````````````````````````*/
+.count_4 {
+  position: relative;
+  right: 0vh;
+  top: 0vh;
+  color: white;
+  font-family: century gothic;
+  padding: 0vh 0vh;
+  display: none;
+  height: 100%;
+  width:100%;
+}
+
+.count_4 p { /* helps quick format text in section*/
+  font-size: 2vh;
+  line-height: 3.2vh;
+  
+}
+
+/* ```````````````````````````````````````````````````````````````````*/
+.count_5 {
+  position: relative;
+  right: 0vh;
+  top: 0vh;
+  color: white;
+  font-family: century gothic;
+  padding: 0vh 0vh;
+  display: none;
+  height: 100%;
+  width:100%;
+}
+
+.count_5 p { /* helps quick format text in section*/
+  font-size: 2vh;
+  line-height: 3.2vh;
+  
+}
+
+/* ```````````````````````````````````````````````````````````````````*/
+
+.news {
+  position: relative;
+  right: 4vh;
+  top: 0vh;
+  color: white;
+  font-family: verdana;
+  padding: 0vh 0vh;
+  display: none;
+  width: 142vh;
+  height: 85vh;
+}
+
+.news p {
+  font-size: 18px;
+  line-height: 28px;
+  
+}
+
+/* ```````````````````````````````````````````````````````````````````*/
+
+.credits {
+  position: relative;
+  right: 4vh;
+  top: 0vh;
+  color: white;
+  font-family: verdana;
+  padding: 0vh 0vh;
+  display: none;
+  width: 142vh;
+  height: 85vh;
+}
+
+.credits p {
+  font-size: 18px;
+  line-height: 28px;
+  
+}
+
+
+
+
+
+
+
+
+
